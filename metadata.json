@@ -1,0 +1,7 @@
+{
+  "name": "Global Export Enterprise",
+  "description": "High-fidelity recreation of the visual design and layout of the reference export enterprise portal, featuring bespoke typography, structured catalog grids, and editorial logistics sections.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
