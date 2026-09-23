@@ -24,21 +24,24 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
     <section id="products" className="py-14 sm:py-20 bg-[#FBFAF6]" aria-label="Product Portfolio">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* Section Head */}
-        <div className="border-l-[3px] border-[#C9A451] pl-5 sm:pl-6 max-w-[800px] mb-10">
+        <div className="border-l-[3px] border-[#C9A451] pl-5 sm:pl-6 max-w-[840px] mb-10">
           <span className="block font-mono-ui text-xs uppercase tracking-[0.14em] text-[#A38442] font-bold mb-2">
-            02 · Featured Portfolio
+            02 · Regulated Formulations · PAN-India Supply
           </span>
           <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3">
-            Your Product Portfolio.
+            Hospital-Grade &amp; Specialty Therapeutic Lines.
           </h2>
           <p className="text-[#55675D] text-base sm:text-lg leading-relaxed">
-            Your description of standard formulations and biologicals quoted for institutional
-            procurement desks. If what you require is not listed,{' '}
+            Supplying intensive care units, oncology departments, and pharmacy networks with authorized
+            lines from premier manufacturing partners including{' '}
+            <strong className="text-[#0A3F23] font-semibold">Senores Pharmaceuticals</strong> and{' '}
+            <strong className="text-[#0A3F23] font-semibold">Concord Biotech (INCA)</strong>. Every delivery includes
+            genuine batch Certificates of Analysis (CoAs) and GST tax invoices.{' '}
             <button
               onClick={onOpenQuoteModal}
               className="text-[#0A3F23] font-semibold underline underline-offset-4 decoration-[#C9A451] hover:text-[#0F5B2E] cursor-pointer"
             >
-              submit a specific sourcing inquiry
+              Submit an institutional supply requirement
             </button>
             .
           </p>

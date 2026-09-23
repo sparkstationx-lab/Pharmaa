@@ -11,16 +11,17 @@ export const TopMarketsSection: React.FC<TopMarketsSectionProps> = ({ onOpenQuot
     <section id="markets" className="py-14 sm:py-20 bg-[#FBFAF6]" aria-label="Export Markets">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* Section Head */}
-        <div className="border-l-[3px] border-[#C9A451] pl-5 sm:pl-6 max-w-[800px] mb-10">
+        <div className="border-l-[3px] border-[#C9A451] pl-5 sm:pl-6 max-w-[840px] mb-10">
           <span className="block font-mono-ui text-xs uppercase tracking-[0.14em] text-[#A38442] font-bold mb-2">
-            05 · Destinations &amp; Lanes
+            05 · PAN-India Distribution Network
           </span>
           <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3">
-            Primary Markets &amp; Regional Hubs.
+            Healthcare Markets &amp; Institutional Segments We Supply.
           </h2>
           <p className="text-[#55675D] text-base sm:text-lg leading-relaxed">
-            Your description highlighting active export routes, destination health authority
-            dossiers, and established international clearance corridors.
+            Operating a nationwide pharmaceutical wholesale corridor from Gwalior (M.P.), Jadon Pharmaceuticals
+            supplies accredited tertiary hospitals, military medical commands, government procurement boards,
+            and licensed retail and hospital pharmacies across India.
           </p>
         </div>
 

@@ -10,6 +10,8 @@ import { TrustBar } from './components/TrustBar';
 import { HeroSection } from './components/HeroSection';
 import { TrustBadgeRow } from './components/TrustBadgeRow';
 import { OperationsCollageSection } from './components/OperationsCollageSection';
+import { LeadershipSection } from './components/LeadershipSection';
+import { StructureSection } from './components/StructureSection';
 import { ProductCatalogSection } from './components/ProductCatalogSection';
 import { SupplyIntegritySection } from './components/SupplyIntegritySection';
 import { PillarsSection } from './components/PillarsSection';
@@ -48,13 +50,13 @@ export default function App() {
 
   return (
     <div id="home" className="min-h-screen flex flex-col bg-[#FBFAF6] text-[#0F2118] selection:bg-[#C9A451]/30">
-      {/* Top Utility Bar */}
+      {/* Top Utility Bar with License and Operations Contact */}
       <UtilityBar />
 
-      {/* Main Sticky Header */}
+      {/* Main Sticky Header with Jadon Pharmaceuticals Brand */}
       <Header onOpenQuoteModal={() => handleOpenQuoteModal()} />
 
-      {/* Trust Bar with Key Accreditations */}
+      {/* Trust Bar with CDSCO License Wholesale-819-A & WHO-GDP Hub */}
       <TrustBar />
 
       {/* Main Content Sections */}
@@ -68,49 +70,55 @@ export default function App() {
         {/* Quality and Compliance Trust Badge Row */}
         <TrustBadgeRow />
 
-        {/* 01 · Operations Collage (Section Manifest) */}
+        {/* 01 · Gwalior Central Depot & Operations Collage */}
         <OperationsCollageSection />
 
-        {/* 02 · Featured Product Portfolio (5-column strip) */}
+        {/* Executive Leadership: Aman Jadon, Achal Jadon, Radhe Shyam Jadon */}
+        <LeadershipSection />
+
+        {/* How We're Structured & Operational Roadmap */}
+        <StructureSection />
+
+        {/* 02 · Hospital-Grade Formulations & Critical-Care Portfolio */}
         <ProductCatalogSection
           onOpenQuoteModal={() => handleOpenQuoteModal()}
           filteredQuery={searchQuery}
         />
 
-        {/* 03 · Supply Integrity Promise (Source to signature) */}
+        {/* 03 · Quality & Statutory Compliance (License Wholesale-819-A & Buyer KYC) */}
         <SupplyIntegritySection />
 
-        {/* Why Choose Us: 3 Numbered Pillars */}
+        {/* Institutional Pillars: Authorized Alliances, Gwalior Hub, Tenders */}
         <PillarsSection />
 
         {/* Continuous Therapeutic Categories Marquee */}
         <MarqueeTicker />
 
-        {/* 04 · Specialty Services */}
+        {/* 04 · Operational Capabilities & Specialty Services */}
         <SpecialtyServicesSection
           onOpenQuoteModal={() => handleOpenQuoteModal()}
         />
 
-        {/* 05 · Top Markets (Hexagonal Honeycomb Geometry) */}
+        {/* 05 · PAN-India Supply Segments (Hospitals, Military, Clinics, Pharmacies) */}
         <TopMarketsSection
           onOpenQuoteModal={() => handleOpenQuoteModal()}
         />
 
-        {/* 06 · Recent Shipment Patterns (Dark Atmospheric Radial) */}
+        {/* 06 · Operational Shipment Logs & Cold-Chain Excerpts */}
         <ShipmentPatternsDarkSection />
 
-        {/* 07 · Regulatory Insights & Field Guides */}
+        {/* 07 · Regulatory Notes & Field Briefings */}
         <InsightsSection
           onOpenQuoteModal={() => handleOpenQuoteModal()}
         />
 
-        {/* Final CTA Band */}
+        {/* Institutional Inquiries Call to Action Band */}
         <CtaBand
           onOpenQuoteModal={() => handleOpenQuoteModal()}
         />
       </main>
 
-      {/* Comprehensive 4-Column Footer */}
+      {/* 4-Column Footer with Corporate Governance & Gwalior Hub */}
       <Footer
         onOpenQuoteModal={() => handleOpenQuoteModal()}
       />
@@ -124,4 +132,3 @@ export default function App() {
     </div>
   );
 }
-

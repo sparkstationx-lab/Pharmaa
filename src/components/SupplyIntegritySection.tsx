@@ -1,73 +1,105 @@
 import React from 'react';
+import { ShieldCheck, FileCheck2, ThermometerSnowflake, UserCheck, CheckCircle2, Lock } from 'lucide-react';
 
 export const SupplyIntegritySection: React.FC = () => {
-  const promises = [
+  const compliancePoints = [
     {
-      ref: 'REF 07.01',
-      title: 'Direct Sourcing Verification',
+      ref: 'CDSCO LIC. 819-A',
+      icon: ShieldCheck,
+      title: 'CDSCO-Authorized Wholesale Operations',
       description:
-        'Every item is procured straight from verified facilities against your confirmed purchase order, ensuring uncompromised provenance without intermediate speculation.',
+        'Authorized wholesale operations conducted under Drug License Wholesale-819-A, adhering strictly to national statutory standards and regulated supply mandates.',
     },
     {
-      ref: 'REF 07.02',
-      title: 'Documented End to End',
+      ref: 'WHO-GDP GWALIOR',
+      icon: ThermometerSnowflake,
+      title: 'WHO-GDP & 2°C–8°C Cold-Chain Protocol',
       description:
-        'Batch certificates, regulatory certifications, and cold-chain temperature telemetry logs accompany every consignment, prepared for destination customs clearance.',
+        'Central warehousing in Gwalior (M.P.) engineered to WHO-GDP specifications, with continuous IoT temperature telemetry from storage to delivery.',
     },
     {
-      ref: 'REF 07.03',
-      title: 'Licensed Entity Handover',
+      ref: 'BATCH TRACEABILITY',
+      icon: FileCheck2,
+      title: 'Certificate of Analysis (CoA) & GST Invoices',
       description:
-        'Deliveries are coordinated directly to your designated licensed importer of record, guided by a single named desk from order validation through receipt.',
+        'Every batch is sourced directly from WHO-GMP certified manufacturers, delivered with verified batch numbers, manufacturer CoAs, and compliant GST invoices.',
+    },
+    {
+      ref: 'BUYER CREDENTIALS',
+      icon: UserCheck,
+      title: 'Mandatory Drug License & GST Verification',
+      description:
+        'Institutional supply is strictly provided to licensed healthcare entities with verified Drug Licenses and active GST registrations, guaranteeing zero unauthorized diversion.',
     },
   ];
 
   return (
     <section
-      id="integrity"
+      id="compliance"
       className="bg-[#E4F1E8] border-y border-[#D4DCD6] py-14 sm:py-20"
-      aria-label="Supply Integrity Promise"
+      aria-labelledby="compliance-title"
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* Section Head */}
-        <div className="border-l-[3px] border-[#C9A451] pl-5 sm:pl-6 max-w-[800px] mb-10">
+        <div className="border-l-[3px] border-[#C9A451] pl-5 sm:pl-6 max-w-[840px] mb-10">
           <span className="block font-mono-ui text-xs uppercase tracking-[0.14em] text-[#A38442] font-bold mb-2">
-            03 · Source to Signature
+            03 · Quality &amp; Statutory Compliance
           </span>
-          <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3">
-            Your Supply-Integrity Promise.
+          <h2
+            id="compliance-title"
+            className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3"
+          >
+            Uncompromising Compliance. Source to Ward.
           </h2>
           <p className="text-[#55675D] text-base sm:text-lg leading-relaxed">
-            Your description of the verified supply chain, batch testing standards, and regulatory
-            documentation guaranteed on every shipment.
+            At Jadon Pharmaceuticals India Private Limited, clinical safety depends on regulatory discipline.
+            From WHO-GMP authorized production intake to hospital ward delivery, every unit complies with CDSCO
+            and WHO-GDP benchmarks.
           </p>
         </div>
 
-        {/* 3-Column Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {promises.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white border border-[#D4DCD6] rounded-[12px] p-7 shadow-xs relative flex flex-col justify-between hover:shadow-md transition-shadow"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="w-8 h-8 rounded-full bg-[#E4F1E8] flex items-center justify-center text-[#1B7A3C] font-semibold text-sm">
-                    0{idx + 1}
-                  </span>
-                  <span className="font-mono-ui text-xs tracking-wider text-[#A38442] font-semibold">
-                    {item.ref}
-                  </span>
+        {/* 4 Compliance Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {compliancePoints.map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={idx}
+                className="bg-white border border-[#D4DCD6] rounded-[12px] p-6 shadow-xs relative flex flex-col justify-between hover:shadow-md hover:border-[#C9A451] transition-all"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-9 h-9 rounded-full bg-[#E4F1E8] flex items-center justify-center text-[#1B7A3C]">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <span className="font-mono-ui text-[10px] tracking-wider text-[#A38442] font-bold bg-[#F5EBD2] px-2 py-0.5 rounded">
+                      {item.ref}
+                    </span>
+                  </div>
+                  <h3 className="font-editorial text-xl font-semibold text-[#0A3F23] mb-2 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-[13px] text-[#55675D] leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="font-editorial text-2xl font-semibold text-[#0A3F23] mb-3 leading-snug">
-                  {item.title}
-                </h3>
-                <p className="text-sm sm:text-[15px] text-[#55675D] leading-relaxed">
-                  {item.description}
-                </p>
               </div>
+            );
+          })}
+        </div>
+
+        {/* Institutional Verification Notice Banner */}
+        <div className="bg-white border-l-4 border-l-[#1B7A3C] border border-[#D4DCD6] rounded-[8px] p-4.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-2xs">
+          <div className="flex items-center gap-3">
+            <Lock className="w-5 h-5 text-[#1B7A3C] shrink-0" />
+            <div className="text-xs sm:text-sm text-[#0F2118]">
+              <strong className="font-semibold text-[#0A3F23]">Institutional Buyer Verification Policy: </strong>
+              As a CDSCO Wholesale-819-A regulated enterprise, supplies are dispatched exclusively to verified hospital pharmacies, registered clinics, government tender authorities, and licensed retail pharmacies.
             </div>
-          ))}
+          </div>
+          <span className="font-mono-ui text-[11px] text-[#1B7A3C] font-semibold bg-[#E4F1E8] px-3 py-1 rounded-[4px] shrink-0">
+            Mandatory KYC: DL + GST
+          </span>
         </div>
       </div>
     </section>

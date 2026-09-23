@@ -4,26 +4,26 @@ export const PillarsSection: React.FC = () => {
   const pillars = [
     {
       num: '①',
-      title: 'Strategic Production Origin',
+      title: 'Authorized Distribution Alliances',
       description:
-        'Established relationships with major verified pharmaceutical manufacturing hubs, providing reliable production volume, rigorous testing, and quality assurance.',
+        'Established direct relationships with premier manufacturers such as Senores Pharmaceuticals and Concord Biotech (INCA), securing verified hospital-grade formulations directly from WHO-GMP facilities.',
     },
     {
       num: '②',
-      title: 'Destination-Ready Compliance',
+      title: 'WHO-GDP Central Hub in Gwalior (M.P.)',
       description:
-        'Custom regulatory dossiers aligned specifically to target country health ministries, expediting port entry without template ambiguity.',
+        'State-of-the-art warehousing featuring active 2°C–8°C cold-chain chambers, real-time IoT temperature telemetry, calibrated thermal transit packaging, and comprehensive batch quarantine.',
     },
     {
       num: '③',
-      title: 'Dedicated Single-Point Desk',
+      title: 'Institutional & Government Tender Eligibility',
       description:
-        'Direct communication with a named operational manager who monitors your specification, pack sizes, customs clearance, and courier tracking.',
+        'CDSCO Wholesale License Wholesale-819-A empaneled for Government healthcare departments, military medical procurement, tertiary hospital networks, and licensed pharmacy chains.',
     },
   ];
 
   return (
-    <section id="pillars" className="bg-white py-14 sm:py-20 border-b border-[#D4DCD6]" aria-label="Why customers choose us">
+    <section id="pillars" className="bg-white py-14 sm:py-20 border-b border-[#D4DCD6]" aria-label="Why healthcare institutions choose us">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
           {pillars.map((pillar, idx) => (

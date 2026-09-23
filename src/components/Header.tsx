@@ -39,10 +39,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           </div>
           <div className="flex flex-col">
             <span className="font-editorial text-xl font-bold tracking-tight text-[#0A3F23] leading-none">
-              YOUR COMPANY
+              JADON PHARMACEUTICALS
             </span>
-            <span className="font-mono-ui text-[9px] tracking-[0.16em] uppercase text-[#55675D] mt-0.5">
-              GLOBAL EXPORT HOUSE
+            <span className="font-mono-ui text-[9px] tracking-[0.14em] uppercase text-[#55675D] mt-0.5">
+              INDIA PVT. LTD. · LIC. WHOLESALE-819-A
             </span>
           </div>
         </a>

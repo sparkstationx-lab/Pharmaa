@@ -64,31 +64,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
       </div>
 
       <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6">
-        {/* Origin Pill */}
+        {/* Origin & License Pill */}
         <div
           id="hero-origin-pill"
-          className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#C9A451]/15 border border-[#C9A451]/35 text-[#D9B870] font-mono-ui text-xs tracking-wider uppercase mb-6 shadow-xs"
+          className="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#C9A451]/15 border border-[#C9A451]/35 text-[#D9B870] font-mono-ui text-xs tracking-wider uppercase mb-6 shadow-xs"
         >
           <span className="w-2 h-2 rounded-full bg-[#B8D347] animate-ping" />
-          <span>Regional Hub · International Desk · Global Corridor</span>
+          <span>Gwalior Hub (M.P.) · CDSCO Lic. Wholesale-819-A · WHO-GDP Cold-Chain</span>
         </div>
 
         {/* Hero Title */}
         <h1
           id="hero-title"
-          className="font-editorial text-4xl sm:text-5xl lg:text-[64px] font-semibold tracking-tight leading-[1.12] text-white max-w-[20ch] mb-6"
+          className="font-editorial text-4xl sm:text-5xl lg:text-[62px] font-semibold tracking-tight leading-[1.12] text-white max-w-[22ch] mb-6"
         >
-          From the <em className="italic text-[#C9A451] font-medium font-editorial">source point of origin</em> to your institutional desk.
+          Hospital-Grade Formulations &amp; <em className="italic text-[#C9A451] font-medium font-editorial">Critical-Care Supply</em> Across India.
         </h1>
 
         {/* Hero Lede / Description */}
-        <p className="font-editorial text-lg sm:text-xl lg:text-[22px] font-normal leading-[1.55] text-white/85 max-w-[58ch] mb-8">
-          Your Company is an international merchant export house supplying{' '}
-          <strong className="text-white font-semibold">standard and specialty</strong> lines,
-          biologicals, and regulated consumables to hospitals, licensed importers, and tender
-          desks across <strong className="text-white font-semibold">global priority markets</strong>,
-          supported by validated cold-chain and dedicated single-contact management.
+        <p className="font-editorial text-lg sm:text-xl lg:text-[22px] font-normal leading-[1.55] text-white/85 max-w-[62ch] mb-7">
+          <strong className="text-white font-semibold">Jadon Pharmaceuticals India Private Limited</strong> is
+          a regulated pharmaceutical wholesale and distribution company. We supply hospital-grade formulations,
+          critical-care therapeutics, plasma derivatives, and specialty medicine to hospitals, clinics, and pharmacies
+          with unbroken <strong className="text-white font-semibold">2°C–8°C cold-chain telemetry</strong> and full
+          batch traceability from our WHO-GDP compliant hub in <strong className="text-white font-semibold">Gwalior, Madhya Pradesh</strong>.
         </p>
+
+        {/* Partner Distribution Relationships Badge */}
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-[6px] bg-white/10 border border-white/20 text-xs font-mono-ui text-white/90 mb-7">
+          <span className="text-[#C9A451] font-semibold">Authorized Distribution:</span>
+          <span>Senores Pharmaceuticals</span>
+          <span className="text-white/40">·</span>
+          <span>Concord Biotech (INCA)</span>
+        </div>
 
         {/* Search Bar Form */}
         <form
@@ -104,7 +112,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
               type="search"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by molecule, brand, code, or category..."
+              placeholder="Search critical-care, plasma, oncology, injectables, or CoA..."
               className="w-full bg-white text-[#0F2118] px-4 py-3.5 rounded-[8px] border-2 border-[#D9B870] placeholder:text-[#55675D]/75 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#C9A451] shadow-md"
             />
           </div>
@@ -124,7 +132,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
             onClick={onOpenQuoteModal}
             className="inline-flex items-center gap-2 bg-[#C9A451] hover:bg-[#D9B870] text-[#0A3F23] font-semibold text-sm sm:text-base px-6 py-3.5 rounded-[4px] transition-colors shadow-xs cursor-pointer"
           >
-            <span>Request a quote</span>
+            <span>Request Institutional Quote</span>
             <ArrowRight className="w-4 h-4" />
           </button>
 
@@ -132,14 +140,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
             href="#products"
             className="inline-flex items-center gap-2 bg-transparent hover:bg-white text-white hover:text-[#0A3F23] border border-white/45 text-sm sm:text-base px-6 py-3.5 rounded-[4px] transition-all cursor-pointer"
           >
-            <span>Browse the portfolio</span>
+            <span>Therapeutic Formulations</span>
           </a>
 
           <a
-            href="#contact"
+            href="#compliance"
             className="inline-flex items-center gap-2 bg-transparent hover:bg-white text-white hover:text-[#0A3F23] border border-white/45 text-sm sm:text-base px-6 py-3.5 rounded-[4px] transition-all cursor-pointer"
           >
-            <span>Request an item</span>
+            <span>License Wholesale-819-A</span>
           </a>
         </div>
 

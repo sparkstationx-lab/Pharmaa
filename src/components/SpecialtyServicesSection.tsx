@@ -13,16 +13,17 @@ export const SpecialtyServicesSection: React.FC<SpecialtyServicesSectionProps> =
     <section id="services" className="py-14 sm:py-20 bg-[#FBFAF6]" aria-label="Specialty Services">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* Section Head */}
-        <div className="border-l-[3px] border-[#C9A451] pl-5 sm:pl-6 max-w-[800px] mb-10">
+        <div className="border-l-[3px] border-[#C9A451] pl-5 sm:pl-6 max-w-[840px] mb-10">
           <span className="block font-mono-ui text-xs uppercase tracking-[0.14em] text-[#A38442] font-bold mb-2">
-            04 · What We Do
+            04 · Operational Capabilities
           </span>
           <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3">
-            Specialty Services. Unified Operational System.
+            Regulated Wholesale, Cold-Chain &amp; Institutional Supply.
           </h2>
           <p className="text-[#55675D] text-base sm:text-lg leading-relaxed">
-            Your description of integrated international sourcing, regulatory affairs, cold-chain
-            logistics, and dedicated order management executed by your team.
+            Operating from our centralized Gwalior distribution depot, Jadon Pharmaceuticals integrates
+            WHO-GDP certified warehousing, unbroken 2°C–8°C cold-chain logistics, and dedicated account
+            management for hospitals, clinics, and government healthcare procurement.
           </p>
         </div>
 

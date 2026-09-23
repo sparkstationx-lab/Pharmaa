@@ -48,3 +48,18 @@ export interface InsightArticle {
   title: string;
   summary: string;
 }
+
+export interface LeadershipProfile {
+  name: string;
+  role: string;
+  focus: string[];
+  bio: string;
+}
+
+export interface StructureStep {
+  step: string;
+  title: string;
+  subtitle: string;
+  details: string;
+}
+

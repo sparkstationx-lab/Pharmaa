@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Instagram } from 'lucide-react';
+import { ShieldCheck, MapPin, Mail, Phone } from 'lucide-react';
 
 interface FooterProps {
   onOpenQuoteModal: () => void;
@@ -8,7 +8,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
   return (
     <footer
-      id="site-footer"
+      id="contact"
       className="bg-[#FBFAF6] border-t-2 border-[#C9A451] pt-14 sm:pt-20 text-[#0F2118]"
       role="contentinfo"
       aria-label="Site Footer"
@@ -36,106 +36,90 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
               </div>
               <div className="flex flex-col">
                 <span className="font-editorial text-xl font-bold tracking-tight text-[#0A3F23] leading-none">
-                  YOUR COMPANY
+                  JADON PHARMACEUTICALS
                 </span>
-                <span className="font-mono-ui text-[9px] tracking-[0.16em] uppercase text-[#55675D] mt-0.5">
-                  GLOBAL EXPORT HOUSE
+                <span className="font-mono-ui text-[9px] tracking-[0.14em] uppercase text-[#55675D] mt-0.5">
+                  INDIA PVT. LTD. · LIC. WHOLESALE-819-A
                 </span>
               </div>
             </div>
 
-            <p className="text-sm text-[#55675D] leading-relaxed mb-6 max-w-[340px]">
-              An international merchant export enterprise supplying branded and generic formulations,
-              biologicals, and regulated consumables to verified institutional and hospital desks
-              across global trade corridors.
+            <p className="text-sm text-[#55675D] leading-relaxed mb-5 max-w-[340px]">
+              A CDSCO-authorized pharmaceutical wholesale enterprise operating under Wholesale License
+              Wholesale-819-A. Direct distribution relationships with Senores Pharmaceuticals and Concord
+              Biotech (INCA), providing hospitals, clinics, and pharmacies nationwide with 2°C–8°C
+              cold-chain integrity and full batch traceability.
             </p>
 
-            <div className="flex items-center gap-2.5">
-              <span className="text-xs font-semibold text-[#0F2118]">Connect</span>
-              <a
-                href="#linkedin"
-                aria-label="LinkedIn"
-                className="w-8 h-8 rounded-[6px] border border-[#0F2118]/20 flex items-center justify-center text-[#0A3F23] hover:bg-[#E4F1E8] hover:border-[#0A3F23] transition-colors"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a
-                href="#instagram"
-                aria-label="Instagram"
-                className="w-8 h-8 rounded-[6px] border border-[#0F2118]/20 flex items-center justify-center text-[#0A3F23] hover:bg-[#E4F1E8] hover:border-[#0A3F23] transition-colors"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
+            <div className="bg-[#E4F1E8] border border-[#0A3F23]/15 rounded-[6px] p-3 text-xs font-mono-ui text-[#0A3F23] space-y-1">
+              <div className="font-bold">CDSCO Wholesale Lic: Wholesale-819-A</div>
+              <div>WHO-GDP Compliant Hub · Gwalior (M.P.)</div>
+              <div className="text-[11px] text-[#55675D]">Strict B2B Licensed Supply Only</div>
             </div>
           </div>
 
-          {/* Column 2: Company Links (lg:col-span-3) */}
+          {/* Column 2: Governance & Structure (lg:col-span-3) */}
           <div className="lg:col-span-3">
             <h3 className="font-editorial text-xl font-semibold text-[#0A3F23] mb-4">
-              Company
+              Organization
             </h3>
             <ul className="space-y-2 text-sm text-[#55675D]">
-              <li><a href="#operations" className="hover:text-[#0A3F23] transition-colors">About our operations</a></li>
-              <li><a href="#services" className="hover:text-[#0A3F23] transition-colors">Specialty services</a></li>
-              <li><a href="#products" className="hover:text-[#0A3F23] transition-colors">Product portfolio</a></li>
-              <li><button onClick={onOpenQuoteModal} className="hover:text-[#0A3F23] transition-colors text-left cursor-pointer">Request an item</button></li>
-              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Export markets</a></li>
-              <li><a href="#insights" className="hover:text-[#0A3F23] transition-colors">Regulatory insights</a></li>
-              <li><a href="#contact-cta" className="hover:text-[#0A3F23] transition-colors">Contact headquarters</a></li>
-              <li><button onClick={onOpenQuoteModal} className="hover:text-[#0A3F23] transition-colors text-left cursor-pointer">Book a consultation</button></li>
-              <li><button onClick={onOpenQuoteModal} className="hover:text-[#0A3F23] transition-colors text-left cursor-pointer">Open institutional account</button></li>
-              <li><a href="#products" className="hover:text-[#0A3F23] transition-colors">Bulk supply &amp; wholesale</a></li>
+              <li><a href="#operations" className="hover:text-[#0A3F23] transition-colors">About Gwalior Central Depot</a></li>
+              <li><a href="#leadership" className="hover:text-[#0A3F23] transition-colors">Executive Leadership</a></li>
+              <li><a href="#structure" className="hover:text-[#0A3F23] transition-colors">Distribution Architecture</a></li>
+              <li><a href="#compliance" className="hover:text-[#0A3F23] transition-colors">WHO-GDP &amp; License 819-A</a></li>
+              <li><a href="#services" className="hover:text-[#0A3F23] transition-colors">Active 2°C–8°C Cold-Chain</a></li>
+              <li><a href="#products" className="hover:text-[#0A3F23] transition-colors">Therapeutic Formulations</a></li>
+              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">PAN-India Supply Network</a></li>
+              <li><button onClick={onOpenQuoteModal} className="hover:text-[#0A3F23] transition-colors text-left cursor-pointer">Institutional Tender Inquiries</button></li>
             </ul>
           </div>
 
-          {/* Column 3: Export Markets (lg:col-span-2) */}
+          {/* Column 3: Segments Served (lg:col-span-2) */}
           <div className="lg:col-span-2">
             <h3 className="font-editorial text-xl font-semibold text-[#0A3F23] mb-4">
-              Export Markets
+              Segments
             </h3>
             <ul className="space-y-2 text-sm text-[#55675D]">
-              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">United Kingdom</a></li>
-              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Gulf Cooperation Council</a></li>
-              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Middle East &amp; North Africa</a></li>
-              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Sub-Saharan Africa</a></li>
-              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">South &amp; Southeast Asia</a></li>
-              <li className="pt-1">
-                <a href="#markets" className="text-[#A38442] font-semibold hover:text-[#0A3F23] transition-colors inline-flex items-center gap-1">
-                  <span>See all 49 markets</span>
-                  <span>→</span>
-                </a>
-              </li>
+              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Tertiary Hospitals</a></li>
+              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Super-Specialty Clinics</a></li>
+              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Hospital Pharmacies</a></li>
+              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Retail Pharmacy Chains</a></li>
+              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Government Tenders</a></li>
+              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Military Healthcare</a></li>
+              <li><a href="#markets" className="hover:text-[#0A3F23] transition-colors">Institutional Groups</a></li>
             </ul>
           </div>
 
-          {/* Column 4: Get in Touch (lg:col-span-3) */}
+          {/* Column 4: Central Depot & Desk (lg:col-span-3) */}
           <div className="lg:col-span-3">
             <h3 className="font-editorial text-xl font-semibold text-[#0A3F23] mb-4">
-              Get in Touch
+              Central Operations
             </h3>
             <ul className="space-y-2.5 text-sm text-[#55675D]">
-              <li>
-                <strong className="text-[#0F2118] font-semibold block">
-                  Central Operations HQ · Dispatch
-                </strong>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-[#0A3F23] mt-0.5 shrink-0" />
+                <span>
+                  <strong className="text-[#0F2118] font-semibold block">
+                    Central Distribution Depot
+                  </strong>
+                  Gwalior, Madhya Pradesh, India
+                </span>
               </li>
-              <li>
-                <span>Direct &amp; Inquiries:{' '}</span>
-                <a href="tel:+00000000000" className="text-[#0A3F23] font-mono-ui font-semibold hover:underline">
-                  +00 00000 00000
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-[#0A3F23] shrink-0" />
+                <a href="mailto:inquiry@jadonpharma.com" className="text-[#0A3F23] font-mono-ui hover:underline">
+                  inquiry@jadonpharma.com
                 </a>
               </li>
-              <li>
-                <span>Email:{' '}</span>
-                <a href="mailto:desk@yourcompany.com" className="text-[#0A3F23] font-mono-ui hover:underline">
-                  desk@yourcompany.com
-                </a>
+              <li className="text-xs text-[#55675D] pt-1 font-mono-ui">
+                Operating Hours: Mon–Sat · 09:30–18:30 IST
               </li>
-              <li className="text-xs text-[#55675D]/90 pt-1 font-mono-ui">
-                Mon–Sat · 04:00–13:00 UTC · 09:30–18:30 Regional Time
-              </li>
-              <li className="pt-2 text-xs">
-                <span>International commercial desk presence in London &amp; Dubai.</span>
+              <li className="pt-2">
+                <div className="bg-white border border-[#D4DCD6] p-2.5 rounded-[6px] text-xs text-[#0F2118]">
+                  <strong className="block text-[#0A3F23] mb-0.5">Authorized Partnerships:</strong>
+                  Senores Pharmaceuticals · Concord Biotech (INCA)
+                </div>
               </li>
             </ul>
           </div>
@@ -143,13 +127,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
 
         {/* Bottom Bar */}
         <div className="border-t border-[#0A1726]/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#55675D]">
-          <span>&copy; 2005–2026 Your Company Name Pvt. Ltd. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} Jadon Pharmaceuticals India Private Limited. All rights reserved.</span>
           <div className="flex items-center gap-3">
-            <a href="#privacy" className="hover:text-[#0A3F23] transition-colors">Privacy Notice</a>
+            <span className="text-[#0A3F23] font-semibold">CDSCO Wholesale Lic: Wholesale-819-A</span>
             <span>·</span>
-            <a href="#compliance" className="hover:text-[#0A3F23] transition-colors">Compliance &amp; Ethics</a>
+            <a href="#compliance" className="hover:text-[#0A3F23] transition-colors">WHO-GDP Compliance</a>
             <span>·</span>
-            <a href="#terms" className="hover:text-[#0A3F23] transition-colors">Terms of Trade</a>
+            <a href="#compliance" className="hover:text-[#0A3F23] transition-colors">Buyer Onboarding Terms</a>
           </div>
         </div>
       </div>

@@ -22,16 +22,17 @@ export const CtaBand: React.FC<CtaBandProps> = ({ onOpenQuoteModal }) => {
 
       <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6">
         <span className="inline-block font-mono-ui text-xs uppercase tracking-[0.14em] text-[#D9B870] font-bold mb-3">
-          Start the Conversation
+          Institutional Supply &amp; Tender Inquiries
         </span>
 
-        <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[46px] font-semibold text-white leading-[1.2] max-w-[26ch] mx-auto mb-4">
-          Tell Us Which Specification, Which Destination, Which Volume.
+        <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[46px] font-semibold text-white leading-[1.2] max-w-[28ch] mx-auto mb-4">
+          Request Hospital-Grade Formulations &amp; Critical-Care Quotes.
         </h2>
 
-        <p className="text-white/80 text-base sm:text-lg max-w-[620px] mx-auto mb-9 leading-relaxed">
-          One working day to a written formal response with pricing, batch lead-times, and destination
-          regulatory status. Dedicated direct desk handling on every inquiry.
+        <p className="text-white/85 text-base sm:text-lg max-w-[660px] mx-auto mb-9 leading-relaxed">
+          Operating under CDSCO Wholesale License Wholesale-819-A. We supply tertiary hospitals,
+          military commands, and pharmacy chains with authorized manufacturer batches, unbroken
+          2°C–8°C cold-chain monitoring, and complete CoA documentation.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3.5">
@@ -39,22 +40,22 @@ export const CtaBand: React.FC<CtaBandProps> = ({ onOpenQuoteModal }) => {
             onClick={onOpenQuoteModal}
             className="inline-flex items-center gap-2 bg-[#C9A451] hover:bg-[#D9B870] text-[#0A3F23] font-semibold text-sm sm:text-base px-7 py-3.5 rounded-[4px] transition-colors shadow-sm cursor-pointer"
           >
-            <span>Request a quote</span>
+            <span>Request Institutional Quote</span>
             <ArrowRight className="w-4 h-4" />
           </button>
 
-          <button
-            onClick={onOpenQuoteModal}
+          <a
+            href="#compliance"
             className="inline-flex items-center gap-2 bg-transparent hover:bg-white text-white hover:text-[#0A3F23] border border-white/45 text-sm sm:text-base px-7 py-3.5 rounded-[4px] transition-all cursor-pointer"
           >
-            <span>Request data package</span>
-          </button>
+            <span>Verify License Wholesale-819-A</span>
+          </a>
 
           <a
             href="#products"
             className="inline-flex items-center gap-2 bg-transparent hover:bg-white text-white hover:text-[#0A3F23] border border-white/45 text-sm sm:text-base px-7 py-3.5 rounded-[4px] transition-all cursor-pointer"
           >
-            <span>Browse portfolio</span>
+            <span>Browse Formulations</span>
           </a>
         </div>
       </div>
