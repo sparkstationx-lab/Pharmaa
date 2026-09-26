@@ -28,18 +28,18 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
           <span className="block font-mono-ui text-xs uppercase tracking-[0.14em] text-[#A38442] font-bold mb-2">
             02 · Regulated Formulations · PAN-India Supply
           </span>
-          <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3">
+          <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0369A1] leading-[1.2] mb-3">
             Hospital-Grade &amp; Specialty Therapeutic Lines.
           </h2>
-          <p className="text-[#55675D] text-base sm:text-lg leading-relaxed">
+          <p className="text-[#475569] text-base sm:text-lg leading-relaxed">
             Supplying intensive care units, oncology departments, and pharmacy networks with authorized
             lines from premier manufacturing partners including{' '}
-            <strong className="text-[#0A3F23] font-semibold">Senores Pharmaceuticals</strong> and{' '}
-            <strong className="text-[#0A3F23] font-semibold">Concord Biotech (INCA)</strong>. Every delivery includes
+            <strong className="text-[#0369A1] font-semibold">Senores Pharmaceuticals</strong> and{' '}
+            <strong className="text-[#0369A1] font-semibold">Concord Biotech (INCA)</strong>. Every delivery includes
             genuine batch Certificates of Analysis (CoAs) and GST tax invoices.{' '}
             <button
               onClick={onOpenQuoteModal}
-              className="text-[#0A3F23] font-semibold underline underline-offset-4 decoration-[#C9A451] hover:text-[#0F5B2E] cursor-pointer"
+              className="text-[#0284C7] font-semibold underline underline-offset-4 decoration-[#38BDF8] hover:text-[#0369A1] cursor-pointer"
             >
               Submit an institutional supply requirement
             </button>
@@ -53,11 +53,11 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
             <div
               key={product.id}
               onClick={onOpenQuoteModal}
-              className="group bg-white border border-[#D4DCD6] rounded-[12px] p-4 flex flex-col justify-between hover:border-[#C9A451] hover:shadow-md transition-all duration-200 cursor-pointer"
+              className="group bg-white border border-[#BAE6FD] rounded-[12px] p-4 flex flex-col justify-between hover:border-[#0284C7] hover:shadow-md transition-all duration-200 cursor-pointer"
             >
               <div>
                 {/* Product Image Square Container */}
-                <div className="aspect-square w-full rounded-[8px] overflow-hidden bg-[#F4F6F4] mb-3.5 border border-[#0A3F23]/8">
+                <div className="aspect-square w-full rounded-[8px] overflow-hidden bg-[#F0F9FF] mb-3.5 border border-[#0284C7]/20">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -72,19 +72,19 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
                 </span>
 
                 {/* Product Name */}
-                <h3 className="font-editorial text-lg font-semibold text-[#0A3F23] leading-snug mb-1.5 group-hover:text-[#0F5B2E] transition-colors">
+                <h3 className="font-editorial text-lg font-semibold text-[#0369A1] leading-snug mb-1.5 group-hover:text-[#0284C7] transition-colors">
                   {product.name}
                 </h3>
 
                 {/* Short Description */}
-                <p className="text-xs text-[#55675D] leading-relaxed line-clamp-3">
+                <p className="text-xs text-[#475569] leading-relaxed line-clamp-3">
                   {product.description}
                 </p>
               </div>
 
-              <div className="mt-3.5 pt-2 border-t border-[#D4DCD6]/60 flex items-center justify-between text-xs text-[#0A3F23] font-medium font-mono-ui">
+              <div className="mt-3.5 pt-2 border-t border-[#BAE6FD]/80 flex items-center justify-between text-xs text-[#0369A1] font-medium font-mono-ui">
                 <span>{product.code}</span>
-                <span className="text-[#C9A451] group-hover:translate-x-1 transition-transform">→</span>
+                <span className="text-[#0284C7] group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </div>
           ))}
@@ -94,7 +94,7 @@ export const ProductCatalogSection: React.FC<ProductCatalogSectionProps> = ({
         <div className="text-center mt-12">
           <button
             onClick={onOpenQuoteModal}
-            className="inline-flex items-center gap-2 bg-transparent hover:bg-[#0A3F23] text-[#0A3F23] hover:text-white border border-[#0A3F23] font-medium text-sm sm:text-base px-7 py-3 rounded-[4px] transition-all cursor-pointer shadow-2xs"
+            className="inline-flex items-center gap-2 bg-transparent hover:bg-[#0284C7] text-[#0284C7] hover:text-white border border-[#0284C7] font-medium text-sm sm:text-base px-7 py-3 rounded-[4px] transition-all cursor-pointer shadow-2xs"
           >
             <span>See the full portfolio</span>
             <ArrowRight className="w-4 h-4" />

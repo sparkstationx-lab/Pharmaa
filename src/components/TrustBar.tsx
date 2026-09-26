@@ -5,7 +5,7 @@ export const TrustBar: React.FC = () => {
   return (
     <div
       id="trust-bar"
-      className="bg-[#0A3F23] text-white/85 py-3 border-b border-[#D9B870]/15"
+      className="bg-[#0284C7] text-white/95 py-3 border-b border-[#BAE6FD]/30"
       role="region"
       aria-label="Trust credentials"
     >

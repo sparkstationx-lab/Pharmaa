@@ -2,19 +2,19 @@
 
 @layer base {
   :root {
-    --mcare-navy-900: #0A3F23;
-    --mcare-navy-800: #0F5B2E;
-    --mcare-navy-700: #1B7A3C;
-    --mcare-navy-100: #E4F1E8;
+    --mcare-navy-900: #0369A1;
+    --mcare-navy-800: #0284C7;
+    --mcare-navy-700: #0EA5E9;
+    --mcare-navy-100: #F0F9FF;
     --mcare-gold-600: #A38442;
     --mcare-gold-500: #C9A451;
     --mcare-gold-400: #D9B870;
     --mcare-gold-300: #E5CD93;
     --mcare-gold-100: #F5EBD2;
-    --mcare-lime-400: #B8D347;
-    --mcare-ink: #0F2118;
-    --mcare-mute: #55675D;
-    --mcare-line: #D4DCD6;
+    --mcare-lime-400: #38BDF8;
+    --mcare-ink: #082F49;
+    --mcare-mute: #475569;
+    --mcare-line: #BAE6FD;
     --mcare-paper: #FBFAF6;
     --mcare-white: #FFFFFF;
     --ff-serif: "Cormorant Garamond", Georgia, serif;
@@ -82,7 +82,7 @@
   text-align: center;
   padding: 1.4rem 1.1rem;
   transition: transform 0.25s ease, filter 0.25s ease;
-  filter: drop-shadow(0 12px 20px rgba(10, 63, 35, 0.2));
+  filter: drop-shadow(0 12px 20px rgba(2, 132, 199, 0.18));
   text-decoration: none;
 }
 
@@ -98,7 +98,7 @@
 
 .market-tile-hex:hover {
   transform: translateY(-4px);
-  filter: drop-shadow(0 16px 26px rgba(10, 63, 35, 0.38));
+  filter: drop-shadow(0 16px 26px rgba(2, 132, 199, 0.32));
 }
 
 .market-tile-hex:hover::before {

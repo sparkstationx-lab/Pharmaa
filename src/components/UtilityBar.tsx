@@ -5,7 +5,7 @@ export const UtilityBar: React.FC = () => {
   return (
     <div
       id="utility-bar"
-      className="w-full bg-[#0A3F23] border-b border-[#D9B870]/20 py-2 text-xs text-white/90"
+      className="w-full bg-[#0284C7] border-b border-[#BAE6FD]/30 py-2 text-xs text-white/95"
       role="complementary"
       aria-label="Contact and operating hours"
     >

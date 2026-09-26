@@ -23,19 +23,19 @@ export const PillarsSection: React.FC = () => {
   ];
 
   return (
-    <section id="pillars" className="bg-white py-14 sm:py-20 border-b border-[#D4DCD6]" aria-label="Why healthcare institutions choose us">
+    <section id="pillars" className="bg-white py-14 sm:py-20 border-b border-[#BAE6FD]" aria-label="Why healthcare institutions choose us">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
           {pillars.map((pillar, idx) => (
             <div key={idx} className="flex gap-4 items-start">
-              <span className="font-editorial text-4xl sm:text-5xl text-[#0A3F23] font-light leading-none shrink-0 select-none">
+              <span className="font-editorial text-4xl sm:text-5xl text-[#0284C7] font-light leading-none shrink-0 select-none">
                 {pillar.num}
               </span>
               <div>
-                <h3 className="font-editorial text-2xl font-semibold text-[#0A3F23] mb-2.5 leading-snug">
+                <h3 className="font-editorial text-2xl font-semibold text-[#0369A1] mb-2.5 leading-snug">
                   {pillar.title}
                 </h3>
-                <p className="text-sm sm:text-[15px] text-[#55675D] leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-[#475569] leading-relaxed">
                   {pillar.description}
                 </p>
               </div>

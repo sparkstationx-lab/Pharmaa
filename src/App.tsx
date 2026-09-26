@@ -5,7 +5,6 @@
 
 import React, { useState } from 'react';
 import { Header } from './components/Header';
-import { TrustBar } from './components/TrustBar';
 import { HeroSection } from './components/HeroSection';
 import { TrustBadgeRow } from './components/TrustBadgeRow';
 import { OperationsCollageSection } from './components/OperationsCollageSection';
@@ -22,9 +21,11 @@ import { InsightsSection } from './components/InsightsSection';
 import { CtaBand } from './components/CtaBand';
 import { Footer } from './components/Footer';
 import { QuoteModal } from './components/QuoteModal';
+import { BookMeetingModal } from './components/BookMeetingModal';
 
 export default function App() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const [isMeetingModalOpen, setIsMeetingModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleOpenQuoteModal = (query?: string) => {
@@ -38,6 +39,14 @@ export default function App() {
     setIsQuoteModalOpen(false);
   };
 
+  const handleOpenMeetingModal = () => {
+    setIsMeetingModalOpen(true);
+  };
+
+  const handleCloseMeetingModal = () => {
+    setIsMeetingModalOpen(false);
+  };
+
   const handleHeroSearch = (query: string) => {
     setSearchQuery(query);
     // Smooth scroll down to products section
@@ -48,12 +57,12 @@ export default function App() {
   };
 
   return (
-    <div id="home" className="min-h-screen flex flex-col bg-[#FBFAF6] text-[#0F2118] selection:bg-[#C9A451]/30">
+    <div id="home" className="min-h-screen flex flex-col bg-[#FBFAF6] text-[#082F49] selection:bg-[#38BDF8]/30">
       {/* Main Sticky Header with Jadon Pharmaceuticals Brand */}
-      <Header onOpenQuoteModal={() => handleOpenQuoteModal()} />
-
-      {/* Trust Bar with CDSCO License Wholesale-819-A & WHO-GDP Hub */}
-      <TrustBar />
+      <Header
+        onOpenQuoteModal={() => handleOpenQuoteModal()}
+        onOpenMeetingModal={handleOpenMeetingModal}
+      />
 
       {/* Main Content Sections */}
       <main id="main-content" className="flex-1">
@@ -124,6 +133,12 @@ export default function App() {
         isOpen={isQuoteModalOpen}
         onClose={handleCloseQuoteModal}
         initialQuery={searchQuery}
+      />
+
+      {/* Commercial & Institutional Consultation Booking Modal */}
+      <BookMeetingModal
+        isOpen={isMeetingModalOpen}
+        onClose={handleCloseMeetingModal}
       />
     </div>
   );

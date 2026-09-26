@@ -30,7 +30,7 @@ export const StructureSection: React.FC = () => {
   return (
     <section
       id="structure"
-      className="py-14 sm:py-20 bg-[#FBFAF6] border-b border-[#D4DCD6]"
+      className="py-14 sm:py-20 bg-[#FBFAF6] border-b border-[#BAE6FD]"
       aria-labelledby="structure-title"
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
@@ -41,11 +41,11 @@ export const StructureSection: React.FC = () => {
           </span>
           <h2
             id="structure-title"
-            className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3"
+            className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0369A1] leading-[1.2] mb-3"
           >
             How We're Structured: Source to Bedside.
           </h2>
-          <p className="text-[#55675D] text-base sm:text-lg leading-relaxed">
+          <p className="text-[#475569] text-base sm:text-lg leading-relaxed">
             Our operational model bridges authorized pharmaceutical manufacturers with clinical institutions
             through a regulated, cold-chain compliant distribution infrastructure.
           </p>
@@ -53,8 +53,8 @@ export const StructureSection: React.FC = () => {
 
         {/* Visual Value-Chain Flow Pipeline */}
         <div className="mb-14">
-          <div className="text-xs font-mono-ui uppercase tracking-[0.14em] text-[#0A3F23] font-bold mb-4 flex items-center gap-2">
-            <Network className="w-4 h-4 text-[#C9A451]" />
+          <div className="text-xs font-mono-ui uppercase tracking-[0.14em] text-[#0369A1] font-bold mb-4 flex items-center gap-2">
+            <Network className="w-4 h-4 text-[#0284C7]" />
             End-to-End Regulated Distribution Model:
           </div>
 
@@ -62,26 +62,26 @@ export const StructureSection: React.FC = () => {
             {STRUCTURE_STEPS.map((step, idx) => (
               <div
                 key={step.step}
-                className="bg-white border border-[#D4DCD6] rounded-[12px] p-5 shadow-xs flex flex-col justify-between relative group hover:border-[#C9A451] transition-all"
+                className="bg-white border border-[#BAE6FD] rounded-[12px] p-5 shadow-xs flex flex-col justify-between relative group hover:border-[#0284C7] transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="font-mono-ui text-xs font-bold text-[#A38442] bg-[#F5EBD2] px-2 py-0.5 rounded-[4px]">
+                    <span className="font-mono-ui text-xs font-bold text-[#0369A1] bg-[#E0F2FE] px-2 py-0.5 rounded-[4px]">
                       STAGE {step.step}
                     </span>
                     {idx < 3 && (
-                      <span className="hidden md:inline-block text-[#C9A451] font-bold text-sm">
+                      <span className="hidden md:inline-block text-[#0284C7] font-bold text-sm">
                         →
                       </span>
                     )}
                   </div>
-                  <h3 className="font-editorial text-xl font-bold text-[#0A3F23] mb-1">
+                  <h3 className="font-editorial text-xl font-bold text-[#0369A1] mb-1">
                     {step.title}
                   </h3>
-                  <span className="block text-xs font-mono-ui text-[#A38442] mb-2 font-medium">
+                  <span className="block text-xs font-mono-ui text-[#0284C7] mb-2 font-medium">
                     {step.subtitle}
                   </span>
-                  <p className="text-xs text-[#55675D] leading-relaxed">
+                  <p className="text-xs text-[#475569] leading-relaxed">
                     {step.details}
                   </p>
                 </div>
@@ -93,11 +93,11 @@ export const StructureSection: React.FC = () => {
         {/* Operational Pillars Grid & Strategic Milestones */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* 6 Operational Capabilities */}
-          <div className="lg:col-span-7 bg-white border border-[#D4DCD6] rounded-[12px] p-6 sm:p-7 shadow-xs">
-            <h3 className="font-editorial text-2xl font-bold text-[#0A3F23] mb-2">
+          <div className="lg:col-span-7 bg-white border border-[#BAE6FD] rounded-[12px] p-6 sm:p-7 shadow-xs">
+            <h3 className="font-editorial text-2xl font-bold text-[#0369A1] mb-2">
               Core Operational Capabilities
             </h3>
-            <p className="text-xs sm:text-sm text-[#55675D] mb-6">
+            <p className="text-xs sm:text-sm text-[#475569] mb-6">
               CDSCO wholesale compliance meets active temperature preservation and automated inventory tracking.
             </p>
 
@@ -105,17 +105,17 @@ export const StructureSection: React.FC = () => {
               {operations.map((op, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#FBFAF6] border border-[#D4DCD6]/80 rounded-[8px] p-3.5 flex flex-col justify-between"
+                  className="bg-[#FBFAF6] border border-[#BAE6FD] rounded-[8px] p-3.5 flex flex-col justify-between"
                 >
                   <div className="flex items-center gap-2 mb-1.5">
-                    <div className="w-5 h-5 rounded-full bg-[#E4F1E8] flex items-center justify-center text-[#1B7A3C] shrink-0">
+                    <div className="w-5 h-5 rounded-full bg-[#E0F2FE] flex items-center justify-center text-[#0284C7] shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
-                    <span className="text-xs sm:text-sm font-semibold text-[#0A3F23]">
+                    <span className="text-xs sm:text-sm font-semibold text-[#0369A1]">
                       {op.label}
                     </span>
                   </div>
-                  <p className="text-xs text-[#55675D] leading-snug pl-7">
+                  <p className="text-xs text-[#475569] leading-snug pl-7">
                     {op.desc}
                   </p>
                 </div>
@@ -124,9 +124,9 @@ export const StructureSection: React.FC = () => {
           </div>
 
           {/* Strategic Timeline & Digital Roadmap */}
-          <div className="lg:col-span-5 bg-[#0A3F23] text-white rounded-[12px] p-6 sm:p-7 shadow-md border border-[#C9A451]/30 flex flex-col justify-between h-full">
+          <div className="lg:col-span-5 bg-gradient-to-br from-[#0369A1] to-[#0284C7] text-white rounded-[12px] p-6 sm:p-7 shadow-md border border-[#38BDF8]/30 flex flex-col justify-between h-full">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-mono-ui text-[#D9B870] uppercase tracking-[0.14em] font-semibold mb-2">
+              <div className="inline-flex items-center gap-2 text-xs font-mono-ui text-[#BAE6FD] uppercase tracking-[0.14em] font-semibold mb-2">
                 <Calendar className="w-3.5 h-3.5" />
                 Strategic Growth &amp; Technology Roadmap
               </div>
@@ -136,20 +136,20 @@ export const StructureSection: React.FC = () => {
 
               <div className="space-y-6">
                 {milestones.map((m, idx) => (
-                  <div key={idx} className="relative pl-6 border-l-2 border-[#C9A451]/50">
-                    <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#C9A451] border-2 border-[#0A3F23]" />
+                  <div key={idx} className="relative pl-6 border-l-2 border-[#38BDF8]/50">
+                    <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#38BDF8] border-2 border-[#0369A1]" />
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="font-editorial text-2xl font-bold text-[#D9B870]">
+                      <span className="font-editorial text-2xl font-bold text-[#E0F2FE]">
                         {m.year}
                       </span>
-                      <span className="text-[10px] font-mono-ui uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded text-white/90">
+                      <span className="text-[10px] font-mono-ui uppercase tracking-wider bg-white/15 px-2 py-0.5 rounded text-white/95">
                         {m.badge}
                       </span>
                     </div>
                     <h4 className="text-sm font-semibold text-white mb-1">
                       {m.title}
                     </h4>
-                    <p className="text-xs text-white/75 leading-relaxed">
+                    <p className="text-xs text-white/80 leading-relaxed">
                       {m.desc}
                     </p>
                   </div>
@@ -157,7 +157,7 @@ export const StructureSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-6 mt-6 border-t border-white/15 flex items-center justify-between text-xs font-mono-ui text-[#D9B870]">
+            <div className="pt-6 mt-6 border-t border-white/20 flex items-center justify-between text-xs font-mono-ui text-[#BAE6FD]">
               <span>Verified Institutional Infrastructure</span>
               <span>Gwalior Central Hub</span>
             </div>

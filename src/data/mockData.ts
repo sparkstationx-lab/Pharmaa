@@ -25,14 +25,13 @@ export const COMPANY_INFO = {
 
 export const NAV_LINKS: NavItem[] = [
   { label: 'Home', href: '#home' },
-  { label: 'About & Depot', href: '#operations' },
-  { label: 'Leadership', href: '#leadership' },
-  { label: 'Structure', href: '#structure' },
+  { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Formulations', href: '#products' },
-  { label: 'PAN-India Network', href: '#markets' },
-  { label: 'Quality & Compliance', href: '#compliance' },
+  { label: 'Products', href: '#products' },
+  { label: 'Markets', href: '#markets' },
+  { label: 'Insights', href: '#insights' },
   { label: 'Contact', href: '#contact' },
+  { label: 'Book a Meeting', href: '#book-meeting', isCta: true },
 ];
 
 export const TRUST_BAR_ITEMS = [

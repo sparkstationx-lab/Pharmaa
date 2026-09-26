@@ -17,10 +17,10 @@ export const SpecialtyServicesSection: React.FC<SpecialtyServicesSectionProps> =
           <span className="block font-mono-ui text-xs uppercase tracking-[0.14em] text-[#A38442] font-bold mb-2">
             04 · Operational Capabilities
           </span>
-          <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3">
+          <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0369A1] leading-[1.2] mb-3">
             Regulated Wholesale, Cold-Chain &amp; Institutional Supply.
           </h2>
-          <p className="text-[#55675D] text-base sm:text-lg leading-relaxed">
+          <p className="text-[#475569] text-base sm:text-lg leading-relaxed">
             Operating from our centralized Gwalior distribution depot, Jadon Pharmaceuticals integrates
             WHO-GDP certified warehousing, unbroken 2°C–8°C cold-chain logistics, and dedicated account
             management for hospitals, clinics, and government healthcare procurement.
@@ -33,27 +33,27 @@ export const SpecialtyServicesSection: React.FC<SpecialtyServicesSectionProps> =
             <div
               key={service.id}
               onClick={onOpenQuoteModal}
-              className="group bg-white border border-[#D4DCD6] rounded-[12px] p-6 sm:p-7 flex flex-col justify-between hover:border-[#C9A451] hover:shadow-md transition-all duration-200 cursor-pointer"
+              className="group bg-white border border-[#BAE6FD] rounded-[12px] p-6 sm:p-7 flex flex-col justify-between hover:border-[#0284C7] hover:shadow-md transition-all duration-200 cursor-pointer"
             >
               <div>
                 {/* Circular Icon Badge */}
-                <div className="w-11 h-11 rounded-full bg-[#F5EBD2] text-[#0A3F23] font-bold flex items-center justify-center text-lg mb-5 group-hover:bg-[#C9A451] transition-colors">
+                <div className="w-11 h-11 rounded-full bg-[#E0F2FE] text-[#0284C7] font-bold flex items-center justify-center text-lg mb-5 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
                   {service.icon}
                 </div>
 
                 {/* Service Title */}
-                <h3 className="font-editorial text-2xl font-semibold text-[#0A3F23] mb-2.5 leading-snug group-hover:text-[#0F5B2E] transition-colors">
+                <h3 className="font-editorial text-2xl font-semibold text-[#0369A1] mb-2.5 leading-snug group-hover:text-[#0284C7] transition-colors">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-[#55675D] leading-relaxed mb-6">
+                <p className="text-sm text-[#475569] leading-relaxed mb-6">
                   {service.description}
                 </p>
               </div>
 
               {/* Action Link */}
-              <div className="pt-3 border-t border-[#D4DCD6]/60 flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#A38442] group-hover:text-[#0A3F23] transition-colors">
+              <div className="pt-3 border-t border-[#BAE6FD]/80 flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#0284C7] group-hover:text-[#0369A1] transition-colors">
                 <span>{service.linkText}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
@@ -65,7 +65,7 @@ export const SpecialtyServicesSection: React.FC<SpecialtyServicesSectionProps> =
         <div className="text-center mt-12">
           <button
             onClick={onOpenQuoteModal}
-            className="inline-flex items-center gap-2 bg-transparent hover:bg-[#0A3F23] text-[#0A3F23] hover:text-white border border-[#0A3F23] font-medium text-sm sm:text-base px-7 py-3 rounded-[4px] transition-all cursor-pointer shadow-2xs"
+            className="inline-flex items-center gap-2 bg-transparent hover:bg-[#0284C7] text-[#0284C7] hover:text-white border border-[#0284C7] font-medium text-sm sm:text-base px-7 py-3 rounded-[4px] transition-all cursor-pointer shadow-2xs"
           >
             <span>See all 18 services</span>
             <ArrowRight className="w-4 h-4" />

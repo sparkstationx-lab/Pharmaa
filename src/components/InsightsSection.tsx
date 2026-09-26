@@ -10,7 +10,7 @@ export const InsightsSection: React.FC<InsightsSectionProps> = ({ onOpenQuoteMod
   return (
     <section
       id="insights"
-      className="bg-[#E4F1E8] border-y border-[#D4DCD6] py-14 sm:py-20"
+      className="bg-[#F0F9FF] border-y border-[#BAE6FD] py-14 sm:py-20"
       aria-labelledby="insights-title"
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
@@ -21,11 +21,11 @@ export const InsightsSection: React.FC<InsightsSectionProps> = ({ onOpenQuoteMod
           </span>
           <h2
             id="insights-title"
-            className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3"
+            className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0369A1] leading-[1.2] mb-3"
           >
             Practical Notes From the Trade Lanes We Run.
           </h2>
-          <p className="text-[#55675D] text-base sm:text-lg leading-relaxed">
+          <p className="text-[#475569] text-base sm:text-lg leading-relaxed">
             Your description covering import protocols, local agent frameworks, temperature profiling,
             and customs documentation packets.
           </p>
@@ -37,21 +37,21 @@ export const InsightsSection: React.FC<InsightsSectionProps> = ({ onOpenQuoteMod
             <div
               key={article.id}
               onClick={onOpenQuoteModal}
-              className="bg-white border border-[#D4DCD6] rounded-[12px] p-6 sm:p-7 shadow-xs flex flex-col justify-between hover:border-[#C9A451] hover:shadow-md transition-all duration-200 cursor-pointer group"
+              className="bg-white border border-[#BAE6FD] rounded-[12px] p-6 sm:p-7 shadow-xs flex flex-col justify-between hover:border-[#0284C7] hover:shadow-md transition-all duration-200 cursor-pointer group"
             >
               <div>
                 <span className="block font-mono-ui text-xs text-[#A38442] font-semibold tracking-wider mb-2.5">
                   {article.tag}
                 </span>
-                <h3 className="font-editorial text-2xl font-semibold text-[#0A3F23] mb-3 leading-snug group-hover:text-[#0F5B2E] transition-colors">
+                <h3 className="font-editorial text-2xl font-semibold text-[#0369A1] mb-3 leading-snug group-hover:text-[#0284C7] transition-colors">
                   {article.title}
                 </h3>
-                <p className="text-sm text-[#55675D] leading-relaxed mb-6">
+                <p className="text-sm text-[#475569] leading-relaxed mb-6">
                   {article.summary}
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-[#D4DCD6]/60 flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#A38442] group-hover:text-[#0A3F23] transition-colors">
+              <div className="pt-3 border-t border-[#BAE6FD]/80 flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#0284C7] group-hover:text-[#0369A1] transition-colors">
                 <span>Read note</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
@@ -63,7 +63,7 @@ export const InsightsSection: React.FC<InsightsSectionProps> = ({ onOpenQuoteMod
         <div className="text-center mt-12">
           <button
             onClick={onOpenQuoteModal}
-            className="inline-flex items-center gap-2 bg-transparent hover:bg-[#0A3F23] text-[#0A3F23] hover:text-white border border-[#0A3F23] font-medium text-sm sm:text-base px-7 py-3 rounded-[4px] transition-all cursor-pointer shadow-2xs"
+            className="inline-flex items-center gap-2 bg-transparent hover:bg-[#0284C7] text-[#0284C7] hover:text-white border border-[#0284C7] font-medium text-sm sm:text-base px-7 py-3 rounded-[4px] transition-all cursor-pointer shadow-2xs"
           >
             <span>All insights</span>
             <ArrowRight className="w-4 h-4" />

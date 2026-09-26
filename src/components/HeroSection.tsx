@@ -20,7 +20,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
   return (
     <section
       id="hero-section"
-      className="relative overflow-hidden bg-gradient-to-r from-[#0A3F23] via-[#0F5B2E] to-[#1B7A3C] text-white py-16 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-gradient-to-r from-[#0369A1] via-[#0284C7] to-[#0EA5E9] text-white py-16 sm:py-24 lg:py-28"
       aria-labelledby="hero-title"
     >
       {/* Radial lighting ambient effect */}
@@ -28,7 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse at 75% 20%, rgba(201, 164, 81, 0.25), transparent 55%), radial-gradient(ellipse at 10% 90%, rgba(201, 164, 81, 0.12), transparent 50%)',
+            'radial-gradient(ellipse at 75% 20%, rgba(56, 189, 248, 0.28), transparent 55%), radial-gradient(ellipse at 10% 90%, rgba(186, 230, 253, 0.18), transparent 50%)',
         }}
       />
 
@@ -39,7 +39,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
           className="w-full h-full object-cover animate-pulse-subtle"
           preserveAspectRatio="xMidYMid slice"
         >
-          <g stroke="#D9B870" strokeWidth="1" fill="none" opacity="0.6">
+          <g stroke="#BAE6FD" strokeWidth="1" fill="none" opacity="0.6">
             <circle cx="180" cy="120" r="36" />
             <circle cx="1020" cy="200" r="52" />
             <circle cx="920" cy="620" r="44" />
@@ -50,7 +50,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
             <path d="M260,600 L540,500 L920,620" />
             <path d="M540,500 L700,180" />
           </g>
-          <g fill="#D9B870" opacity="0.8">
+          <g fill="#BAE6FD" opacity="0.8">
             <circle cx="180" cy="120" r="3.5" />
             <circle cx="420" cy="260" r="3.5" />
             <circle cx="260" cy="600" r="3.5" />
@@ -67,9 +67,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
         {/* Origin & License Pill */}
         <div
           id="hero-origin-pill"
-          className="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#C9A451]/15 border border-[#C9A451]/35 text-[#D9B870] font-mono-ui text-xs tracking-wider uppercase mb-6 shadow-xs"
+          className="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/15 border border-white/30 text-[#E0F2FE] font-mono-ui text-xs tracking-wider uppercase mb-6 shadow-xs backdrop-blur-xs"
         >
-          <span className="w-2 h-2 rounded-full bg-[#B8D347] animate-ping" />
+          <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-ping" />
           <span>Gwalior Hub (M.P.) · CDSCO Lic. Wholesale-819-A · WHO-GDP Cold-Chain</span>
         </div>
 
@@ -78,11 +78,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
           id="hero-title"
           className="font-editorial text-4xl sm:text-5xl lg:text-[62px] font-semibold tracking-tight leading-[1.12] text-white max-w-[22ch] mb-6"
         >
-          Hospital-Grade Formulations &amp; <em className="italic text-[#C9A451] font-medium font-editorial">Critical-Care Supply</em> Across India.
+          Hospital-Grade Formulations &amp; <em className="italic text-[#BAE6FD] font-medium font-editorial">Critical-Care Supply</em> Across India.
         </h1>
 
         {/* Hero Lede / Description */}
-        <p className="font-editorial text-lg sm:text-xl lg:text-[22px] font-normal leading-[1.55] text-white/85 max-w-[62ch] mb-7">
+        <p className="font-editorial text-lg sm:text-xl lg:text-[22px] font-normal leading-[1.55] text-white/90 max-w-[62ch] mb-7">
           <strong className="text-white font-semibold">Jadon Pharmaceuticals India Private Limited</strong> is
           a regulated pharmaceutical wholesale and distribution company. We supply hospital-grade formulations,
           critical-care therapeutics, plasma derivatives, and specialty medicine to hospitals, clinics, and pharmacies
@@ -91,8 +91,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
         </p>
 
         {/* Partner Distribution Relationships Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-[6px] bg-white/10 border border-white/20 text-xs font-mono-ui text-white/90 mb-7">
-          <span className="text-[#C9A451] font-semibold">Authorized Distribution:</span>
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-[6px] bg-white/15 border border-white/25 text-xs font-mono-ui text-white/95 mb-7">
+          <span className="text-[#BAE6FD] font-semibold">Authorized Distribution:</span>
           <span>Senores Pharmaceuticals</span>
           <span className="text-white/40">·</span>
           <span>Concord Biotech (INCA)</span>
@@ -113,12 +113,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search critical-care, plasma, oncology, injectables, or CoA..."
-              className="w-full bg-white text-[#0F2118] px-4 py-3.5 rounded-[8px] border-2 border-[#D9B870] placeholder:text-[#55675D]/75 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#C9A451] shadow-md"
+              className="w-full bg-white text-[#082F49] px-4 py-3.5 rounded-[8px] border-2 border-[#BAE6FD] placeholder:text-[#475569]/75 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#38BDF8] shadow-md"
             />
           </div>
           <button
             type="submit"
-            className="inline-flex items-center justify-center gap-2 bg-[#C9A451] hover:bg-[#D9B870] text-[#0A3F23] font-semibold px-6 py-3.5 rounded-[4px] transition-colors shadow-sm cursor-pointer whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 bg-[#082F49] hover:bg-[#0C4A6E] text-white font-semibold px-6 py-3.5 rounded-[4px] transition-colors shadow-sm cursor-pointer whitespace-nowrap"
           >
             <Search className="w-4 h-4" />
             <span>Search</span>
@@ -130,22 +130,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal, onSe
         <div id="hero-cta-group" className="flex flex-wrap items-center gap-3.5 mb-12">
           <button
             onClick={onOpenQuoteModal}
-            className="inline-flex items-center gap-2 bg-[#C9A451] hover:bg-[#D9B870] text-[#0A3F23] font-semibold text-sm sm:text-base px-6 py-3.5 rounded-[4px] transition-colors shadow-xs cursor-pointer"
+            className="inline-flex items-center gap-2 bg-white hover:bg-[#F0F9FF] text-[#0284C7] font-bold text-sm sm:text-base px-6 py-3.5 rounded-[4px] transition-colors shadow-sm cursor-pointer"
           >
             <span>Request Institutional Quote</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-[#0284C7]" />
           </button>
 
           <a
             href="#products"
-            className="inline-flex items-center gap-2 bg-transparent hover:bg-white text-white hover:text-[#0A3F23] border border-white/45 text-sm sm:text-base px-6 py-3.5 rounded-[4px] transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 bg-transparent hover:bg-white text-white hover:text-[#0284C7] border border-white/50 text-sm sm:text-base px-6 py-3.5 rounded-[4px] transition-all cursor-pointer"
           >
             <span>Therapeutic Formulations</span>
           </a>
 
           <a
             href="#compliance"
-            className="inline-flex items-center gap-2 bg-transparent hover:bg-white text-white hover:text-[#0A3F23] border border-white/45 text-sm sm:text-base px-6 py-3.5 rounded-[4px] transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 bg-transparent hover:bg-white text-white hover:text-[#0284C7] border border-white/50 text-sm sm:text-base px-6 py-3.5 rounded-[4px] transition-all cursor-pointer"
           >
             <span>License Wholesale-819-A</span>
           </a>

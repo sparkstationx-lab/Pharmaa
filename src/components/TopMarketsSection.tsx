@@ -15,10 +15,10 @@ export const TopMarketsSection: React.FC<TopMarketsSectionProps> = ({ onOpenQuot
           <span className="block font-mono-ui text-xs uppercase tracking-[0.14em] text-[#A38442] font-bold mb-2">
             05 · PAN-India Distribution Network
           </span>
-          <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3">
+          <h2 className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0369A1] leading-[1.2] mb-3">
             Healthcare Markets &amp; Institutional Segments We Supply.
           </h2>
-          <p className="text-[#55675D] text-base sm:text-lg leading-relaxed">
+          <p className="text-[#475569] text-base sm:text-lg leading-relaxed">
             Operating a nationwide pharmaceutical wholesale corridor from Gwalior (M.P.), Jadon Pharmaceuticals
             supplies accredited tertiary hospitals, military medical commands, government procurement boards,
             and licensed retail and hospital pharmacies across India.
@@ -65,14 +65,14 @@ export const TopMarketsSection: React.FC<TopMarketsSectionProps> = ({ onOpenQuot
             <div
               key={market.id}
               onClick={onOpenQuoteModal}
-              className="bg-white border border-[#D4DCD6] rounded-[12px] p-4 flex items-center justify-between shadow-2xs hover:border-[#C9A451] transition-colors cursor-pointer"
+              className="bg-white border border-[#BAE6FD] rounded-[12px] p-4 flex items-center justify-between shadow-2xs hover:border-[#0284C7] transition-colors cursor-pointer"
             >
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-[#E4F1E8] flex items-center justify-center text-[#0A3F23] shrink-0 font-bold text-xs">
+                <div className="w-8 h-8 rounded-full bg-[#E0F2FE] flex items-center justify-center text-[#0284C7] shrink-0 font-bold text-xs">
                   {market.flagCode}
                 </div>
                 <div>
-                  <h4 className="font-editorial text-lg font-semibold text-[#0A3F23] leading-snug">
+                  <h4 className="font-editorial text-lg font-semibold text-[#0369A1] leading-snug">
                     {market.name}
                   </h4>
                   <span className="font-mono-ui text-[11px] text-[#A38442] block">
@@ -80,7 +80,7 @@ export const TopMarketsSection: React.FC<TopMarketsSectionProps> = ({ onOpenQuot
                   </span>
                 </div>
               </div>
-              <ArrowRight className="w-4 h-4 text-[#C9A451] shrink-0" />
+              <ArrowRight className="w-4 h-4 text-[#0284C7] shrink-0" />
             </div>
           ))}
         </div>
@@ -89,7 +89,7 @@ export const TopMarketsSection: React.FC<TopMarketsSectionProps> = ({ onOpenQuot
         <div className="text-center mt-12 sm:mt-16">
           <button
             onClick={onOpenQuoteModal}
-            className="inline-flex items-center gap-2 bg-transparent hover:bg-[#0A3F23] text-[#0A3F23] hover:text-white border border-[#0A3F23] font-medium text-sm sm:text-base px-7 py-3 rounded-[4px] transition-all cursor-pointer shadow-2xs"
+            className="inline-flex items-center gap-2 bg-transparent hover:bg-[#0284C7] text-[#0284C7] hover:text-white border border-[#0284C7] font-medium text-sm sm:text-base px-7 py-3 rounded-[4px] transition-all cursor-pointer shadow-2xs"
           >
             <span>Browse all 49 export markets</span>
             <ArrowRight className="w-4 h-4" />
@@ -109,10 +109,10 @@ const HexTile: React.FC<HexTileProps> = ({ market, onClick }) => {
   return (
     <div onClick={onClick} className="market-tile-hex cursor-pointer group">
       <div className="flex flex-col items-center justify-center gap-1.5 px-2">
-        <div className="w-7 h-7 rounded-full bg-[#0A3F23]/10 text-[#0A3F23] group-hover:bg-[#D9B870]/20 group-hover:text-[#D9B870] flex items-center justify-center text-[10px] font-mono-ui font-bold transition-colors">
+        <div className="w-7 h-7 rounded-full bg-[#0284C7]/15 text-[#0284C7] group-hover:bg-[#D9B870]/20 group-hover:text-[#D9B870] flex items-center justify-center text-[10px] font-mono-ui font-bold transition-colors">
           <Globe2 className="w-3.5 h-3.5" />
         </div>
-        <span className="market-tile-name font-editorial text-[16px] font-semibold text-[#0A3F23] leading-tight transition-colors">
+        <span className="market-tile-name font-editorial text-[16px] font-semibold text-[#0369A1] leading-tight transition-colors">
           {market.name}
         </span>
         <span className="market-tile-regulator font-mono-ui text-[10px] text-[#A38442] leading-tight transition-colors tracking-wide max-w-[120px]">

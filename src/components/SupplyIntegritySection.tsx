@@ -36,7 +36,7 @@ export const SupplyIntegritySection: React.FC = () => {
   return (
     <section
       id="compliance"
-      className="bg-[#E4F1E8] border-y border-[#D4DCD6] py-14 sm:py-20"
+      className="bg-[#F0F9FF] border-y border-[#BAE6FD] py-14 sm:py-20"
       aria-labelledby="compliance-title"
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
@@ -47,11 +47,11 @@ export const SupplyIntegritySection: React.FC = () => {
           </span>
           <h2
             id="compliance-title"
-            className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0A3F23] leading-[1.2] mb-3"
+            className="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#0369A1] leading-[1.2] mb-3"
           >
             Uncompromising Compliance. Source to Ward.
           </h2>
-          <p className="text-[#55675D] text-base sm:text-lg leading-relaxed">
+          <p className="text-[#475569] text-base sm:text-lg leading-relaxed">
             At Jadon Pharmaceuticals India Private Limited, clinical safety depends on regulatory discipline.
             From WHO-GMP authorized production intake to hospital ward delivery, every unit complies with CDSCO
             and WHO-GDP benchmarks.
@@ -65,21 +65,21 @@ export const SupplyIntegritySection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white border border-[#D4DCD6] rounded-[12px] p-6 shadow-xs relative flex flex-col justify-between hover:shadow-md hover:border-[#C9A451] transition-all"
+                className="bg-white border border-[#BAE6FD] rounded-[12px] p-6 shadow-xs relative flex flex-col justify-between hover:shadow-md hover:border-[#0284C7] transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-9 h-9 rounded-full bg-[#E4F1E8] flex items-center justify-center text-[#1B7A3C]">
+                    <div className="w-9 h-9 rounded-full bg-[#E0F2FE] flex items-center justify-center text-[#0284C7]">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="font-mono-ui text-[10px] tracking-wider text-[#A38442] font-bold bg-[#F5EBD2] px-2 py-0.5 rounded">
+                    <span className="font-mono-ui text-[10px] tracking-wider text-[#0369A1] font-bold bg-[#E0F2FE] px-2 py-0.5 rounded">
                       {item.ref}
                     </span>
                   </div>
-                  <h3 className="font-editorial text-xl font-semibold text-[#0A3F23] mb-2 leading-snug">
+                  <h3 className="font-editorial text-xl font-semibold text-[#0369A1] mb-2 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-[13px] text-[#55675D] leading-relaxed">
+                  <p className="text-xs sm:text-[13px] text-[#475569] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -89,15 +89,15 @@ export const SupplyIntegritySection: React.FC = () => {
         </div>
 
         {/* Institutional Verification Notice Banner */}
-        <div className="bg-white border-l-4 border-l-[#1B7A3C] border border-[#D4DCD6] rounded-[8px] p-4.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-2xs">
+        <div className="bg-white border-l-4 border-l-[#0284C7] border border-[#BAE6FD] rounded-[8px] p-4.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-2xs">
           <div className="flex items-center gap-3">
-            <Lock className="w-5 h-5 text-[#1B7A3C] shrink-0" />
-            <div className="text-xs sm:text-sm text-[#0F2118]">
-              <strong className="font-semibold text-[#0A3F23]">Institutional Buyer Verification Policy: </strong>
+            <Lock className="w-5 h-5 text-[#0284C7] shrink-0" />
+            <div className="text-xs sm:text-sm text-[#082F49]">
+              <strong className="font-semibold text-[#0369A1]">Institutional Buyer Verification Policy: </strong>
               As a CDSCO Wholesale-819-A regulated enterprise, supplies are dispatched exclusively to verified hospital pharmacies, registered clinics, government tender authorities, and licensed retail pharmacies.
             </div>
           </div>
-          <span className="font-mono-ui text-[11px] text-[#1B7A3C] font-semibold bg-[#E4F1E8] px-3 py-1 rounded-[4px] shrink-0">
+          <span className="font-mono-ui text-[11px] text-[#0284C7] font-semibold bg-[#E0F2FE] px-3 py-1 rounded-[4px] shrink-0">
             Mandatory KYC: DL + GST
           </span>
         </div>
