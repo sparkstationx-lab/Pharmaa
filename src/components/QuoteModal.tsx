@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, CheckCircle2, Send, ShieldCheck, Lock } from 'lucide-react';
+import logoImg from '../assets/logo1.jpg';
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -56,9 +57,21 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose, initial
           >
             <X className="w-5 h-5" />
           </button>
-          <span className="font-mono-ui text-[11px] uppercase tracking-[0.14em] text-[#BAE6FD] font-semibold block mb-1">
-            CDSCO Lic: Wholesale-819-A · Gwalior Hub
-          </span>
+          <div className="flex items-center gap-3 mb-2">
+            <img
+              src={logoImg}
+              alt="Jadon Pharmaceuticals Logo"
+              className="w-10 h-10 rounded-lg object-contain bg-white border border-white/30 shrink-0 shadow-xs"
+            />
+            <div>
+              <span className="font-mono-ui text-[11px] uppercase tracking-[0.14em] text-[#BAE6FD] font-semibold block">
+                CDSCO Lic: Wholesale-819-A · Gwalior Hub
+              </span>
+              <span className="text-[11px] text-white/80 font-editorial tracking-wide">
+                Jadon Pharmaceuticals India Pvt. Ltd.
+              </span>
+            </div>
+          </div>
           <h2 id="quote-modal-title" className="font-editorial text-2xl sm:text-3xl font-bold">
             Institutional Supply &amp; Quotation Request
           </h2>

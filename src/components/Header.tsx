@@ -1,25 +1,35 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Calendar, Menu, X } from 'lucide-react';
+import logoImg from '../assets/logo1.jpg';
 
 interface HeaderProps {
-  onOpenQuoteModal: () => void;
-  onOpenMeetingModal: () => void;
+  onOpenQuoteModal?: () => void;
+  onOpenMeetingModal?: () => void;
 }
 
-const NAV_BUTTONS = [
-  'Home',
-  'About',
-  'Services',
-  'Products',
-  'Markets',
-  'Insights',
-  'Contact',
-  'Book a Meeting',
+interface NavItemDef {
+  label: string;
+  path: string;
+  isCta?: boolean;
+}
+
+const NAV_ITEMS: NavItemDef[] = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' },
+  { label: 'Services', path: '/services' },
+  { label: 'Products', path: '/products' },
+  { label: 'Markets', path: '/markets' },
+  { label: 'Insights', path: '/insights' },
+  { label: 'Contact', path: '/contact' },
+  { label: 'Book a Meeting', path: '/book-a-meeting', isCta: true },
 ];
 
 export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal, onOpenMeetingModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,35 +39,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal, onOpenMeetingM
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (label: string) => {
+  const isItemActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/' || location.pathname === '/home';
+    }
+    return location.pathname === path;
+  };
+
+  const handleNavClick = (item: NavItemDef) => {
     setMobileMenuOpen(false);
-
-    if (label === 'Book a Meeting') {
-      onOpenMeetingModal();
-      return;
-    }
-
-    const targetMap: Record<string, string> = {
-      Home: 'home',
-      About: 'about',
-      Services: 'services',
-      Products: 'products',
-      Markets: 'markets',
-      Insights: 'insights',
-      Contact: 'contact',
-    };
-
-    const targetId = targetMap[label];
-    if (targetId) {
-      if (targetId === 'home') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        const el = document.getElementById(targetId);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    }
+    navigate(item.path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -74,69 +66,75 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal, onOpenMeetingM
       >
         <div className="px-4 sm:px-6 h-[68px] sm:h-[72px] flex items-center justify-between gap-4">
           {/* Brand Logo */}
-          <a
+          <button
             id="site-logo"
-            href="#home"
-            className="flex items-center gap-3 group focus:outline-none"
+            type="button"
+            onClick={() => {
+              navigate('/');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none shrink-0 cursor-pointer text-left"
             aria-label="Jadon Pharmaceuticals Homepage"
           >
-            <div className="w-10 h-10 rounded-lg bg-[#0284C7] flex items-center justify-center text-white border border-[#38BDF8]/40 shadow-xs group-hover:bg-[#0369A1] transition-colors shrink-0">
-              <svg
-                className="w-6 h-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <path d="M12 8v8" />
-                <path d="M8 12h8" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-editorial text-lg sm:text-xl font-bold tracking-tight text-[#0369A1] leading-none">
+            <img
+              src={logoImg}
+              alt="Jadon Pharmaceuticals Logo"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-contain bg-white border border-[#BAE6FD] shadow-xs group-hover:border-[#0284C7] transition-all shrink-0"
+            />
+            <div className="flex flex-col justify-center">
+              <span className="font-editorial text-lg sm:text-xl font-bold tracking-tight text-[#0369A1] leading-none group-hover:text-[#0284C7] transition-colors">
                 JADON PHARMACEUTICALS
               </span>
               <span className="font-mono-ui text-[9px] tracking-[0.12em] uppercase text-[#475569] mt-0.5">
                 INDIA PVT. LTD. · LIC. WHOLESALE-819-A
               </span>
             </div>
-          </a>
+          </button>
 
-          {/* Desktop Primary Navigation: Home, About, Services, Products, Markets, Insights, Contact, Book a Meeting */}
+          {/* Desktop Primary Navigation */}
           <nav
             id="main-navigation"
             className="hidden lg:flex items-center gap-1 sm:gap-1.5 xl:gap-2 text-[13px] xl:text-[14px] font-medium text-[#082F49]"
             aria-label="Primary Navigation"
           >
-            {NAV_BUTTONS.map((label) => {
-              if (label === 'Book a Meeting') {
+            {NAV_ITEMS.map((item) => {
+              const active = isItemActive(item.path);
+
+              if (item.isCta) {
                 return (
                   <button
-                    key={label}
+                    key={item.label}
                     id="nav-btn-book-meeting"
                     type="button"
-                    onClick={() => handleNavClick(label)}
-                    className="ml-2 inline-flex items-center gap-1.5 bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-xs sm:text-[13px] px-3.5 py-2 rounded-lg transition-colors cursor-pointer shadow-xs shadow-[#0284C7]/20"
+                    onClick={() => handleNavClick(item)}
+                    className={`ml-2 inline-flex items-center gap-1.5 font-semibold text-xs sm:text-[13px] px-3.5 py-2 rounded-lg transition-all cursor-pointer shadow-xs ${
+                      active
+                        ? 'bg-[#0369A1] text-white ring-2 ring-[#38BDF8] shadow-sm'
+                        : 'bg-[#0284C7] hover:bg-[#0369A1] text-white shadow-[#0284C7]/20'
+                    }`}
                     aria-label="Book a Meeting"
+                    aria-current={active ? 'page' : undefined}
                   >
                     <Calendar className="w-3.5 h-3.5" />
-                    <span>{label}</span>
+                    <span>{item.label}</span>
                   </button>
                 );
               }
 
               return (
                 <button
-                  key={label}
-                  id={`nav-btn-${label.toLowerCase()}`}
+                  key={item.label}
+                  id={`nav-btn-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                   type="button"
-                  onClick={() => handleNavClick(label)}
-                  className="px-2.5 sm:px-3 py-1.5 rounded-lg text-[#082F49] hover:text-[#0284C7] hover:bg-[#E0F2FE]/70 transition-colors cursor-pointer font-medium"
+                  onClick={() => handleNavClick(item)}
+                  className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-colors cursor-pointer font-medium ${
+                    active
+                      ? 'bg-[#E0F2FE] text-[#0284C7] font-semibold border border-[#BAE6FD]'
+                      : 'text-[#082F49] hover:text-[#0284C7] hover:bg-[#E0F2FE]/70'
+                  }`}
+                  aria-current={active ? 'page' : undefined}
                 >
-                  {label}
+                  {item.label}
                 </button>
               );
             })}
@@ -157,24 +155,31 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal, onOpenMeetingM
           </div>
         </div>
 
-        {/* Mobile Menu Dropdown: Home, About, Services, Products, Markets, Insights, Contact, Book a Meeting */}
+        {/* Mobile Menu Dropdown */}
         {mobileMenuOpen && (
           <div
             id="mobile-menu-drawer"
             className="lg:hidden border-t border-[#BAE6FD] px-4 pt-3 pb-5 space-y-1 animate-in slide-in-from-top-2 duration-200"
           >
-            {NAV_BUTTONS.map((label) => {
-              if (label === 'Book a Meeting') {
+            {NAV_ITEMS.map((item) => {
+              const active = isItemActive(item.path);
+
+              if (item.isCta) {
                 return (
-                  <div key={label} className="pt-2">
+                  <div key={item.label} className="pt-2">
                     <button
                       id="mobile-nav-btn-book-meeting"
                       type="button"
-                      onClick={() => handleNavClick(label)}
-                      className="w-full inline-flex items-center justify-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-sm py-2.5 rounded-lg transition-colors cursor-pointer shadow-xs"
+                      onClick={() => handleNavClick(item)}
+                      className={`w-full inline-flex items-center justify-center gap-2 font-semibold text-sm py-2.5 rounded-lg transition-all cursor-pointer shadow-xs ${
+                        active
+                          ? 'bg-[#0369A1] text-white ring-2 ring-[#38BDF8]'
+                          : 'bg-[#0284C7] hover:bg-[#0369A1] text-white'
+                      }`}
+                      aria-current={active ? 'page' : undefined}
                     >
                       <Calendar className="w-4 h-4" />
-                      <span>{label}</span>
+                      <span>{item.label}</span>
                     </button>
                   </div>
                 );
@@ -182,13 +187,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal, onOpenMeetingM
 
               return (
                 <button
-                  key={label}
-                  id={`mobile-nav-btn-${label.toLowerCase()}`}
+                  key={item.label}
+                  id={`mobile-nav-btn-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                   type="button"
-                  onClick={() => handleNavClick(label)}
-                  className="w-full text-left py-2.5 px-3 text-[15px] font-medium text-[#082F49] hover:text-[#0284C7] hover:bg-[#E0F2FE]/50 rounded-lg transition-colors cursor-pointer border-b border-[#BAE6FD]/40 last:border-b-0"
+                  onClick={() => handleNavClick(item)}
+                  className={`w-full text-left py-2.5 px-3 text-[15px] rounded-lg transition-colors cursor-pointer border-b border-[#BAE6FD]/40 last:border-b-0 ${
+                    active
+                      ? 'bg-[#E0F2FE] text-[#0284C7] font-semibold'
+                      : 'text-[#082F49] hover:text-[#0284C7] hover:bg-[#E0F2FE]/50 font-medium'
+                  }`}
+                  aria-current={active ? 'page' : undefined}
                 >
-                  {label}
+                  {item.label}
                 </button>
               );
             })}

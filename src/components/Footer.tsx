@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ShieldCheck, MapPin, Mail, Phone } from 'lucide-react';
+import logoImg from '../assets/logo1.jpg';
 
 interface FooterProps {
   onOpenQuoteModal: () => void;
+  onOpenMeetingModal?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenMeetingModal }) => {
   return (
     <footer
       id="contact"
@@ -18,31 +21,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 pb-12">
           {/* Column 1: Brand & Profile (lg:col-span-4) */}
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-sm bg-[#0284C7] flex items-center justify-center text-white border border-[#38BDF8]/40 shadow-xs">
-                <svg
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <path d="M12 8v8" />
-                  <path d="M8 12h8" />
-                </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-editorial text-xl font-bold tracking-tight text-[#0369A1] leading-none">
+            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 mb-4 group">
+              <img
+                src={logoImg}
+                alt="Jadon Pharmaceuticals Logo"
+                className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg object-contain bg-white border border-[#BAE6FD] shadow-xs shrink-0 group-hover:border-[#0284C7] transition-all"
+              />
+              <div className="flex flex-col justify-center">
+                <span className="font-editorial text-xl font-bold tracking-tight text-[#0369A1] leading-none group-hover:text-[#0284C7] transition-colors">
                   JADON PHARMACEUTICALS
                 </span>
                 <span className="font-mono-ui text-[9px] tracking-[0.14em] uppercase text-[#475569] mt-0.5">
                   INDIA PVT. LTD. · LIC. WHOLESALE-819-A
                 </span>
               </div>
-            </div>
+            </Link>
 
             <p className="text-sm text-[#475569] leading-relaxed mb-5 max-w-[340px]">
               A CDSCO-authorized pharmaceutical wholesale enterprise operating under Wholesale License
@@ -58,20 +51,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
             </div>
           </div>
 
-          {/* Column 2: Governance & Structure (lg:col-span-3) */}
+          {/* Column 2: Navigation Links (lg:col-span-3) */}
           <div className="lg:col-span-3">
             <h3 className="font-editorial text-xl font-semibold text-[#0369A1] mb-4">
-              Organization
+              Quick Links
             </h3>
             <ul className="space-y-2 text-sm text-[#475569]">
-              <li><a href="#operations" className="hover:text-[#0284C7] transition-colors">About Gwalior Central Depot</a></li>
-              <li><a href="#leadership" className="hover:text-[#0284C7] transition-colors">Executive Leadership</a></li>
-              <li><a href="#structure" className="hover:text-[#0284C7] transition-colors">Distribution Architecture</a></li>
-              <li><a href="#compliance" className="hover:text-[#0284C7] transition-colors">WHO-GDP &amp; License 819-A</a></li>
-              <li><a href="#services" className="hover:text-[#0284C7] transition-colors">Active 2°C–8°C Cold-Chain</a></li>
-              <li><a href="#products" className="hover:text-[#0284C7] transition-colors">Therapeutic Formulations</a></li>
-              <li><a href="#markets" className="hover:text-[#0284C7] transition-colors">PAN-India Supply Network</a></li>
-              <li><button onClick={onOpenQuoteModal} className="hover:text-[#0284C7] transition-colors text-left cursor-pointer">Institutional Tender Inquiries</button></li>
+              <li><Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#0284C7] transition-colors">Home</Link></li>
+              <li><Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#0284C7] transition-colors">About Us &amp; Depot</Link></li>
+              <li><Link to="/services" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#0284C7] transition-colors">Specialty Services</Link></li>
+              <li><Link to="/products" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#0284C7] transition-colors">Pharmaceutical Products</Link></li>
+              <li><Link to="/markets" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#0284C7] transition-colors">PAN-India Markets</Link></li>
+              <li><Link to="/insights" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#0284C7] transition-colors">Regulatory Insights</Link></li>
+              <li><Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#0284C7] transition-colors">Contact Central Depot</Link></li>
+              <li><Link to="/book-a-meeting" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-[#0284C7] font-semibold hover:text-[#0369A1] transition-colors">Book a Meeting</Link></li>
             </ul>
           </div>
 
@@ -81,13 +74,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
               Segments
             </h3>
             <ul className="space-y-2 text-sm text-[#475569]">
-              <li><a href="#markets" className="hover:text-[#0284C7] transition-colors">Tertiary Hospitals</a></li>
-              <li><a href="#markets" className="hover:text-[#0284C7] transition-colors">Super-Specialty Clinics</a></li>
-              <li><a href="#markets" className="hover:text-[#0284C7] transition-colors">Hospital Pharmacies</a></li>
-              <li><a href="#markets" className="hover:text-[#0284C7] transition-colors">Retail Pharmacy Chains</a></li>
-              <li><a href="#markets" className="hover:text-[#0284C7] transition-colors">Government Tenders</a></li>
-              <li><a href="#markets" className="hover:text-[#0284C7] transition-colors">Military Healthcare</a></li>
-              <li><a href="#markets" className="hover:text-[#0284C7] transition-colors">Institutional Groups</a></li>
+              <li><Link to="/markets" className="hover:text-[#0284C7] transition-colors">Tertiary Hospitals</Link></li>
+              <li><Link to="/markets" className="hover:text-[#0284C7] transition-colors">Super-Specialty Clinics</Link></li>
+              <li><Link to="/markets" className="hover:text-[#0284C7] transition-colors">Hospital Pharmacies</Link></li>
+              <li><Link to="/markets" className="hover:text-[#0284C7] transition-colors">Retail Pharmacy Chains</Link></li>
+              <li><Link to="/markets" className="hover:text-[#0284C7] transition-colors">Government Tenders</Link></li>
+              <li><Link to="/markets" className="hover:text-[#0284C7] transition-colors">Military Healthcare</Link></li>
+              <li><Link to="/markets" className="hover:text-[#0284C7] transition-colors">Institutional Groups</Link></li>
             </ul>
           </div>
 
@@ -131,12 +124,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
           <div className="flex items-center gap-3">
             <span className="text-[#0369A1] font-semibold">CDSCO Wholesale Lic: Wholesale-819-A</span>
             <span>·</span>
-            <a href="#compliance" className="hover:text-[#0284C7] transition-colors">WHO-GDP Compliance</a>
+            <Link to="/about" className="hover:text-[#0284C7] transition-colors">WHO-GDP Compliance</Link>
             <span>·</span>
-            <a href="#compliance" className="hover:text-[#0284C7] transition-colors">Buyer Onboarding Terms</a>
+            <Link to="/contact" className="hover:text-[#0284C7] transition-colors">Buyer Onboarding Terms</Link>
           </div>
         </div>
       </div>
     </footer>
   );
 };
+

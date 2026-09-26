@@ -4,26 +4,22 @@
  */
 
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
-import { HeroSection } from './components/HeroSection';
-import { TrustBadgeRow } from './components/TrustBadgeRow';
-import { OperationsCollageSection } from './components/OperationsCollageSection';
-import { LeadershipSection } from './components/LeadershipSection';
-import { StructureSection } from './components/StructureSection';
-import { ProductCatalogSection } from './components/ProductCatalogSection';
-import { SupplyIntegritySection } from './components/SupplyIntegritySection';
-import { PillarsSection } from './components/PillarsSection';
-import { MarqueeTicker } from './components/MarqueeTicker';
-import { SpecialtyServicesSection } from './components/SpecialtyServicesSection';
-import { TopMarketsSection } from './components/TopMarketsSection';
-import { ShipmentPatternsDarkSection } from './components/ShipmentPatternsDarkSection';
-import { InsightsSection } from './components/InsightsSection';
-import { CtaBand } from './components/CtaBand';
 import { Footer } from './components/Footer';
 import { QuoteModal } from './components/QuoteModal';
 import { BookMeetingModal } from './components/BookMeetingModal';
 
-export default function App() {
+import { Home } from './pages/Home';
+import { About } from './pages/About';
+import { Services } from './pages/Services';
+import { Products } from './pages/Products';
+import { Markets } from './pages/Markets';
+import { Insights } from './pages/Insights';
+import { Contact } from './pages/Contact';
+import { BookMeeting } from './pages/BookMeeting';
+
+function AppContent() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const [isMeetingModalOpen, setIsMeetingModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -47,85 +43,57 @@ export default function App() {
     setIsMeetingModalOpen(false);
   };
 
-  const handleHeroSearch = (query: string) => {
-    setSearchQuery(query);
-    // Smooth scroll down to products section
-    const productsEl = document.getElementById('products');
-    if (productsEl) {
-      productsEl.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div id="home" className="min-h-screen flex flex-col bg-[#FBFAF6] text-[#082F49] selection:bg-[#38BDF8]/30">
-      {/* Main Sticky Header with Jadon Pharmaceuticals Brand */}
+      {/* Main Sticky Header with Jadon Pharmaceuticals Brand & Navigation */}
       <Header
         onOpenQuoteModal={() => handleOpenQuoteModal()}
         onOpenMeetingModal={handleOpenMeetingModal}
       />
 
-      {/* Main Content Sections */}
-      <main id="main-content" className="flex-1">
-        {/* Hero Section */}
-        <HeroSection
-          onOpenQuoteModal={() => handleOpenQuoteModal()}
-          onSearch={handleHeroSearch}
+      {/* Page Routing */}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              onOpenQuoteModal={handleOpenQuoteModal}
+              onOpenMeetingModal={handleOpenMeetingModal}
+            />
+          }
         />
-
-        {/* Quality and Compliance Trust Badge Row */}
-        <TrustBadgeRow />
-
-        {/* 01 · Gwalior Central Depot & Operations Collage */}
-        <OperationsCollageSection />
-
-        {/* Executive Leadership: Aman Jadon, Achal Jadon, Radhe Shyam Jadon */}
-        <LeadershipSection />
-
-        {/* How We're Structured & Operational Roadmap */}
-        <StructureSection />
-
-        {/* 02 · Hospital-Grade Formulations & Critical-Care Portfolio */}
-        <ProductCatalogSection
-          onOpenQuoteModal={() => handleOpenQuoteModal()}
-          filteredQuery={searchQuery}
+        <Route
+          path="/home"
+          element={
+            <Home
+              onOpenQuoteModal={handleOpenQuoteModal}
+              onOpenMeetingModal={handleOpenMeetingModal}
+            />
+          }
         />
-
-        {/* 03 · Quality & Statutory Compliance (License Wholesale-819-A & Buyer KYC) */}
-        <SupplyIntegritySection />
-
-        {/* Institutional Pillars: Authorized Alliances, Gwalior Hub, Tenders */}
-        <PillarsSection />
-
-        {/* Continuous Therapeutic Categories Marquee */}
-        <MarqueeTicker />
-
-        {/* 04 · Operational Capabilities & Specialty Services */}
-        <SpecialtyServicesSection
-          onOpenQuoteModal={() => handleOpenQuoteModal()}
+        <Route
+          path="/about"
+          element={
+            <About
+              onOpenQuoteModal={handleOpenQuoteModal}
+              onOpenMeetingModal={handleOpenMeetingModal}
+            />
+          }
         />
-
-        {/* 05 · PAN-India Supply Segments (Hospitals, Military, Clinics, Pharmacies) */}
-        <TopMarketsSection
-          onOpenQuoteModal={() => handleOpenQuoteModal()}
-        />
-
-        {/* 06 · Operational Shipment Logs & Cold-Chain Excerpts */}
-        <ShipmentPatternsDarkSection />
-
-        {/* 07 · Regulatory Notes & Field Briefings */}
-        <InsightsSection
-          onOpenQuoteModal={() => handleOpenQuoteModal()}
-        />
-
-        {/* Institutional Inquiries Call to Action Band */}
-        <CtaBand
-          onOpenQuoteModal={() => handleOpenQuoteModal()}
-        />
-      </main>
+        <Route path="/services" element={<Services />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/markets" element={<Markets />} />
+        <Route path="/insights" element={<Insights />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/book-a-meeting" element={<BookMeeting />} />
+        <Route path="/book-meeting" element={<BookMeeting />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
 
       {/* 4-Column Footer with Corporate Governance & Gwalior Hub */}
       <Footer
         onOpenQuoteModal={() => handleOpenQuoteModal()}
+        onOpenMeetingModal={handleOpenMeetingModal}
       />
 
       {/* Interactive Quotation & Inquiries Modal */}
@@ -141,5 +109,13 @@ export default function App() {
         onClose={handleCloseMeetingModal}
       />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
   );
 }

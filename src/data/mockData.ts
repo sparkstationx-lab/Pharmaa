@@ -24,14 +24,14 @@ export const COMPANY_INFO = {
 };
 
 export const NAV_LINKS: NavItem[] = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Products', href: '#products' },
-  { label: 'Markets', href: '#markets' },
-  { label: 'Insights', href: '#insights' },
-  { label: 'Contact', href: '#contact' },
-  { label: 'Book a Meeting', href: '#book-meeting', isCta: true },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Products', href: '/products' },
+  { label: 'Markets', href: '/markets' },
+  { label: 'Insights', href: '/insights' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Book a Meeting', href: '/book-a-meeting', isCta: true },
 ];
 
 export const TRUST_BAR_ITEMS = [

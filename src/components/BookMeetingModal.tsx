@@ -12,6 +12,7 @@ import {
   CalendarPlus,
   Send,
 } from 'lucide-react';
+import logoImg from '../assets/logo1.jpg';
 
 interface BookMeetingModalProps {
   isOpen: boolean;
@@ -116,14 +117,26 @@ export const BookMeetingModal: React.FC<BookMeetingModalProps> = ({ isOpen, onCl
           >
             <X className="w-5 h-5" />
           </button>
-          <div className="flex items-center gap-2 mb-1.5">
-            <span className="inline-flex items-center gap-1.5 bg-white/15 px-2.5 py-0.5 rounded-full font-mono-ui text-[10px] sm:text-[11px] uppercase tracking-[0.14em] text-[#E0F2FE] font-semibold border border-white/20">
-              <Calendar className="w-3 h-3" />
-              Institutional Desk Booking
-            </span>
-            <span className="text-[10px] sm:text-[11px] text-[#BAE6FD] font-mono-ui hidden sm:inline">
-              · Lic: Wholesale-819-A
-            </span>
+          <div className="flex items-center gap-3 mb-2">
+            <img
+              src={logoImg}
+              alt="Jadon Pharmaceuticals Logo"
+              className="w-10 h-10 rounded-lg object-contain bg-white border border-white/30 shrink-0 shadow-xs"
+            />
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 bg-white/15 px-2.5 py-0.5 rounded-full font-mono-ui text-[10px] sm:text-[11px] uppercase tracking-[0.14em] text-[#E0F2FE] font-semibold border border-white/20">
+                  <Calendar className="w-3 h-3" />
+                  Institutional Desk Booking
+                </span>
+                <span className="text-[10px] sm:text-[11px] text-[#BAE6FD] font-mono-ui hidden sm:inline">
+                  · Lic: Wholesale-819-A
+                </span>
+              </div>
+              <span className="text-[11px] text-white/80 font-editorial tracking-wide mt-0.5">
+                Jadon Pharmaceuticals India Pvt. Ltd.
+              </span>
+            </div>
           </div>
           <h2 id="meeting-modal-title" className="font-editorial text-2xl sm:text-3xl font-bold">
             Schedule a Commercial Consultation
