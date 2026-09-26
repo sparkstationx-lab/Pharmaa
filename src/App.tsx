@@ -4,7 +4,6 @@
  */
 
 import React, { useState } from 'react';
-import { UtilityBar } from './components/UtilityBar';
 import { Header } from './components/Header';
 import { TrustBar } from './components/TrustBar';
 import { HeroSection } from './components/HeroSection';
@@ -50,9 +49,6 @@ export default function App() {
 
   return (
     <div id="home" className="min-h-screen flex flex-col bg-[#FBFAF6] text-[#0F2118] selection:bg-[#C9A451]/30">
-      {/* Top Utility Bar with License and Operations Contact */}
-      <UtilityBar />
-
       {/* Main Sticky Header with Jadon Pharmaceuticals Brand */}
       <Header onOpenQuoteModal={() => handleOpenQuoteModal()} />
 
